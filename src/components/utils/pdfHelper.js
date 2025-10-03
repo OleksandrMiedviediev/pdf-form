@@ -4,14 +4,14 @@ import { saveAs } from "file-saver";
 
 export async function fillPdf(form) {
   // загружаем исходный PDF (положи его в public/formularz.pdf)
-  const existingPdfBytes = await fetch("./formularz.pdf").then(res => res.arrayBuffer());
+  const existingPdfBytes = await fetch("/formularz.pdf").then(res => res.arrayBuffer());
   const pdfDoc = await PDFDocument.load(existingPdfBytes);
 
   // регистрируем fontkit для поддержки Unicode
   pdfDoc.registerFontkit(fontkit);
 
   // грузим Unicode-шрифт
-  const fontBytes = await fetch("./NotoSans-VariableFont_wdth,wght.ttf").then(res => res.arrayBuffer());
+  const fontBytes = await fetch("/NotoSans-VariableFont_wdth,wght.ttf").then(res => res.arrayBuffer());
   const customFont = await pdfDoc.embedFont(fontBytes);
 
   const formPdf = pdfDoc.getForm();
