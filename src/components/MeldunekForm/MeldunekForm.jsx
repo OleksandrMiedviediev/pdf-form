@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import css from "./MeldunekForm.module.css";
+import InfoMeldunek from "../InfoMeldunek/InfoMeldunek.jsx";
 
 // 🔹 Валидатор польских букв
 const polishRegex = /^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$/;
@@ -191,6 +192,9 @@ export default function MeldunekForm() {
           </Form>
         )}
       </Formik>
+      <InfoMeldunek />
     </div>
+    
   );
+  
 }

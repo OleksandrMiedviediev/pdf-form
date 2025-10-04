@@ -1,0 +1,35 @@
+.home {
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    padding: 40px 50px;
+    animation: fadeInUp 0.5s ease;
+  }
+  
+  .homeTitle {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #003366;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .homeSubtitle {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .homeSection {
+    margin-top: 30px;
+    text-align: left;
+    line-height: 1.6;
+  }
+  
+  .homeSection h2 {
+    color: #0055aa;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+  }
