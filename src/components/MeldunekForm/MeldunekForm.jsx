@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, {useState, useEffect } from "react";
 import { fillPdf } from "../utils/pdfHelper.js";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -88,12 +88,14 @@ const fields = [
 const initialValues = fields.reduce((acc, f) => ({ ...acc, [f.name]: "" }), {});
 
 export default function MeldunekForm() {
+    const [savedValues, setSavedValues] = useState(null);
   useEffect(() => {
     const saved = localStorage.getItem("formData");
     if (saved) {
       Object.assign(initialValues, JSON.parse(saved));
     }
   }, []);
+  const initialValues = savedValues || fields.reduce((acc, f) => ({ ...acc, [f.name]: "" }), {});
 
   return (
       <div className={css.formBox}>
@@ -154,6 +156,7 @@ export default function MeldunekForm() {
                   onClick={() => {
                     resetForm();
                     localStorage.removeItem("formData");
+                    setSavedValues(null);
                   }}
                 >
                   🧹 Wyczyść formularz
