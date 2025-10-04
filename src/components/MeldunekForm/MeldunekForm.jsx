@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { fillPdf } from "../utils/pdfHelper.js";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -84,87 +84,93 @@ const fields = [
   { name: "dataKoncowa", placeholder: "Data końcowa", type: "date" },
 ];
 
-// 🔹 Начальные значения
-const initialValues = fields.reduce((acc, f) => ({ ...acc, [f.name]: "" }), {});
-
 export default function MeldunekForm() {
-    const [savedValues, setSavedValues] = useState(null);
+  const [savedValues, setSavedValues] = useState(null);
+
+  // 🔹 Загружаем данные из localStorage при монтировании
   useEffect(() => {
     const saved = localStorage.getItem("formData");
-    if (saved) {
-      Object.assign(initialValues, JSON.parse(saved));
-    }
+    if (saved) setSavedValues(JSON.parse(saved));
   }, []);
+
   const initialValues = savedValues || fields.reduce((acc, f) => ({ ...acc, [f.name]: "" }), {});
 
-  return (
-      <div className={css.formBox}>
-        <h2>Zgłoszenie pobytu czasowego</h2>
+  // 🔹 Функция для обновления значения поля и сохранения в localStorage
+  const handleFieldChange = (field, value, setFieldValue) => {
+    setFieldValue(field, value);
+    const newValues = { ...savedValues, [field]: value };
+    setSavedValues(newValues);
+    localStorage.setItem("formData", JSON.stringify(newValues));
+  };
 
-        <Formik
-          initialValues={initialValues}
-          validationSchema={MeldunekSchema}
-          enableReinitialize
-          onSubmit={(values) => {
-            fillPdf(values);
-            localStorage.setItem("formData", JSON.stringify(values));
-          }}
-        >
-          {({ values, setFieldValue, resetForm }) => (
-            <Form>
-              <div className={css.formGrid}>
+  return (
+    <div className={css.formBox}>
+      <h2>Zgłoszenie pobytu czasowego</h2>
+
+      <Formik
+        initialValues={initialValues}
+        validationSchema={MeldunekSchema}
+        enableReinitialize
+        onSubmit={(values) => fillPdf(values)}
+      >
+        {({ values, setFieldValue, resetForm }) => (
+          <Form>
+            <div className={css.formGrid}>
               {fields.map((field) => (
                 <div key={field.name} className={css.fieldWrapper}>
-                    <label htmlFor={field.name} className={css.label}>
+                  <label htmlFor={field.name} className={css.label}>
                     {field.placeholder}
-                    </label>
+                  </label>
 
-                    <div className={css.inputContainer}>
+                  <div className={css.inputContainer}>
                     <Field
-                        id={field.name}       
-                        name={field.name}
-                        placeholder={field.placeholder}
-                        type={field.type || "text"}
-                        className={css.field}
+                      id={field.name}
+                      name={field.name}
+                      type={field.type || "text"}
+                      placeholder={field.placeholder}
+                      className={css.field}
+                      onChange={(e) =>
+                        handleFieldChange(field.name, e.target.value, setFieldValue)
+                      }
+                      value={values[field.name]}
                     />
                     {values[field.name] && (
-                        <button
+                      <button
                         type="button"
                         className={css.clearBtn}
-                        onClick={() => setFieldValue(field.name, "")}
-                        >
+                        onClick={() => handleFieldChange(field.name, "", setFieldValue)}
+                      >
                         <AiOutlineCloseCircle />
-                        </button>
+                      </button>
                     )}
-                    </div>
+                  </div>
 
-                    <ErrorMessage
+                  <ErrorMessage
                     name={field.name}
                     component="div"
                     className={css.errorMessage}
-                    />
-  </div>
-))}
+                  />
+                </div>
+              ))}
+            </div>
 
-              </div>
-
-              <div className={css.buttons}>
-                <button type="submit">📄 Pobierz PDF</button>
-                <button
-                  type="button"
-                  className={css.btn}
-                  onClick={() => {
-                    resetForm();
-                    localStorage.removeItem("formData");
-                    setSavedValues(null);
-                  }}
-                >
-                  🧹 Wyczyść formularz
-                </button>
-              </div>
-            </Form>
-          )}
-        </Formik>
-      </div>
+            <div className={css.buttons}>
+              <button type="submit">📄 Pobierz PDF</button>
+              <button
+                type="button"
+                className={css.btn}
+                onClick={() => {
+                  resetForm();
+                  localStorage.removeItem("formData");
+                  setSavedValues(null);
+                }}
+              >
+                🧹 Wyczyść formularz
+              </button>
+            </div>
+          </Form>
+        )}
+      </Formik>
+    </div>
   );
 }
