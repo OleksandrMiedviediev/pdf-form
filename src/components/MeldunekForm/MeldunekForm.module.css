@@ -137,9 +137,6 @@
     border: 1px solid #ccc;
   }
   
-  .btn:hover {
-    background: #d6d6d6;
-  }  
   .label {
     display: block;
     font-weight: 500;

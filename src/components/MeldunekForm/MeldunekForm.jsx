@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { fillPdf } from "../utils/pdfHelper.js";
+import { fillPdf } from "../utils/meldunekPdfHelper.js";
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { AiOutlineCloseCircle } from "react-icons/ai";

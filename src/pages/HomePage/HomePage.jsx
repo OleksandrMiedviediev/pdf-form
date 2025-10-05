@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import css from "./HomePage.module.css";
 
 export default function HomePage() {
@@ -31,6 +32,10 @@ export default function HomePage() {
             Цей сайт створений, щоб допомогти іноземцям у Польщі зрозуміти та
             підготувати документи, такі як тимчасова реєстрація (meldunek) та інші.
           </p>
+        </div>
+        <div className={css.homeButtons}> 
+        <Link className={css.btn} to="/meldunek">📝 Meldunek</Link>
+
         </div>
       </div>
     </div>
