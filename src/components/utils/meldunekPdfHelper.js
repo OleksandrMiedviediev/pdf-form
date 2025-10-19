@@ -181,5 +181,5 @@ export async function fillPdf(form) {
 
   // сохраняем
   const pdfBytes = await pdfDoc.save();
-  saveAs(new Blob([pdfBytes], { type: "application/pdf" }), "wypelniony_formularz.pdf");
+  saveAs(new Blob([pdfBytes], { type: "application/pdf" }), "wypelniony_formularz_MELDUNEK.pdf");
 }

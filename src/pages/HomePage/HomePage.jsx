@@ -35,7 +35,7 @@ export default function HomePage() {
         </div>
         <div className={css.homeButtons}> 
         <Link className={css.btn} to="/meldunek">📝 Meldunek</Link>
-
+        <Link className={css.btn} to="/pesel">📝 Pesel</Link>
         </div>
       </div>
     </div>

@@ -1,0 +1,195 @@
+.formBox {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 40px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.sectionTitle {
+  grid-column: 1 / -1;
+  margin: 40px 0 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #003366;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 6px;
+}
+
+/* 🔹 Сетка для полей */
+.formGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.fieldWrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.field {
+  width: 100%;
+  display: flex;
+  padding: 10px 36px 10px 12px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+/* 🔸 Кнопка очистки */
+.clearBtn {
+  position: absolute;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+
+.clearBtn:hover {
+  color: #ff4d4d;
+}
+
+/* 🔸 Ошибки */
+.errorMessage {
+  color: #d9534f;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* 🔹 Радио-группы */
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px 16px;
+  margin-top: 4px;
+}
+
+.radioGroup label {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  background: #f7f9fc;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.25s ease;
+}
+
+.radioGroup input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  background-color: white;
+  transition: background-color 0.25s, border-color 0.25s;
+}
+
+.radioGroup input[type="radio"]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.radioGroup label:hover {
+  border-color: #007bff;
+  background: #e8f2ff;
+}
+
+.radioGroup input[type="radio"]:checked + span,
+.radioGroup input[type="radio"]:checked ~ span {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* 🔸 Кнопки */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.buttons button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+
+.buttons button:hover {
+  background: #0056b3;
+}
+
+.buttons button[type="button"] {
+  background: #dc3545;
+}
+
+.buttons button[type="button"]:hover {
+  background: #b02a37;
+}
+
+/* 🔹 Адаптив */
+@media (max-width: 700px) {
+  .formBox {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+}
