@@ -66,5 +66,5 @@ export async function fillPdf(form) {
 
   // Сохраняем PDF
   const pdfBytes = await pdfDoc.save();
-  saveAs(new Blob([pdfBytes], { type: "application/pdf" }), "wypelniony_formularz_PESEL.pdf");
+  saveAs(new Blob([pdfBytes], { type: "application/pdf" }), "wypelniony_formularz_Umozenie.pdf");
 }
