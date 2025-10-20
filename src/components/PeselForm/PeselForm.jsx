@@ -353,7 +353,7 @@ function FieldBlock({ name, label, values, setFieldValue, handleFieldChange, typ
 }
 
 
-// 🔸 Радио-группа (новая красивая версия)
+// 🔸 Радио-группа
 function RadioGroup({ label, name, options, values, setFieldValue, handleFieldChange }) {
   return (
     <div className={css.fieldWrapper}>

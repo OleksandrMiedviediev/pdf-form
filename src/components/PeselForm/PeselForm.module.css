@@ -155,20 +155,31 @@ label {
   font-size: 1rem;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.25s;
+  transition: background 0.25s ease, transform 0.2s ease;
+  transform: translateY(0);
 }
 
+/* Эффект при наведении */
 .buttons button:hover {
   background: #0056b3;
+  transform: translateY(-2px);
 }
 
+/* Кнопка "очистить" */
 .buttons button[type="button"] {
   background: #dc3545;
 }
 
 .buttons button[type="button"]:hover {
   background: #b02a37;
+  transform: translateY(-2px);
 }
+
+/* Небольшая тень для визуального "подъема" */
+.buttons button:active {
+  transform: translateY(0);
+}
+
 
 /* 🔹 Адаптив */
 @media (max-width: 700px) {
