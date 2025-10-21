@@ -13,7 +13,8 @@ const validationSchema = Yup.object().shape({
   imieNazwisko: Yup.string()
     .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
     .required("Wymagane / Required / Обов’язково"),
-  dataUrodzenia: Yup.string().required("Wymagane / Required / Обов’язково"),
+  dataUrodzenia: Yup.date().max(new Date(), 'Data urodzenia nie może być w przyszłości / Date of birth cannot be in the future / Дата народження не може бути в майбутньому')
+  .required('Wprowadź datę urodzenia / Enter your date of birth / Введіть дату народження'),
   ulica: Yup.string()
     .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
     .required("Wymagane / Required / Обов’язково"),
