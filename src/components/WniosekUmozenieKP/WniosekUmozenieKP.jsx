@@ -147,7 +147,7 @@ export default function WniosekUmorzenieKP() {
             />
             <FieldBlock
               name="numerUlicy"
-              label="Numer ulicy / House Number / Номер будинку"
+              label="Numer / House Number / Номер будинку"
               placeholder="10A"
               {...{ values, setFieldValue, handleFieldChange }}
             />
