@@ -1,0 +1,43 @@
+.fieldWrapper {
+    margin-bottom: 1rem;
+  }
+  
+  .label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  
+  .inputContainer {
+    position: relative;
+  }
+  
+  .field {
+    width:-webkit-fill-available;
+    padding: 0.6rem 2.2rem 0.6rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    display: flex;
+  }
+  
+  .errorInput {
+    border-color: #d33;
+  }
+  
+  .clearBtn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .errorMessage {
+    color: #d33;
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+  }
+  

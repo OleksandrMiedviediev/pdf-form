@@ -1,0 +1,76 @@
+:root {
+    --fg: #222;
+    --muted: #666;
+    --accent: #0b74de;
+    --bg: #fafafa;
+    --max-width: 1100px;
+  }
+  
+  .footer {
+    background: var(--bg);
+    color: var(--fg);
+    padding: 28px 16px;
+    border-top: 1px solid #eee;
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  }
+  
+  .container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--fg);
+  }
+  
+  .contactRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    align-items: center;
+  }
+  
+  .email {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--fg);
+  }
+  
+  .email:hover {
+    text-decoration: underline;
+  }
+  
+  .social {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .socialLink {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 500;
+    padding: 6px 8px;
+    border-radius: 8px;
+    transition: 0.2s ease;
+  }
+  
+  .socialLink:hover {
+    color: var(--accent);
+    background: rgba(11, 116, 222, 0.06);
+  }
+  
+  @media (min-width: 700px) {
+    .container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  

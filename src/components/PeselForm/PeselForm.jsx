@@ -4,6 +4,8 @@ import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import css from "./PeselForm.module.css";
+import ButtonsGroup from "../ui/ButtonsGroup/ButtonsGroup.jsx";
+
 
 // ✅ Валидатор польских букв
 const polishRegex = /^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$/;
@@ -46,8 +48,7 @@ const PeselSchema = Yup.object().shape({
     .required("Wymagane / Required / Обов’язково"),
   obywatelstwo: Yup.string().required("Wymagane / Required / Обов’язково"),
   obywatelstwoInne: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
+    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери"),
   numerPaszportu: Yup.string(),
   dataWaznosciPaszportu: Yup.date(),
   numerPodrozy: Yup.string().required("Wymagane / Required / Обов’язково"),
@@ -77,19 +78,16 @@ const PeselSchema = Yup.object().shape({
   oznaczenieOrganuKtoryWydalDowod: Yup.string(),
   stanCywilny: Yup.string().required("Wymagane / Required / Обов’язково"),
   imieMalzonka: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
+    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери"),
   nazwiskoRodoweMalzonka: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
+    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери"),
   numerPeselMalzonka: Yup.string()
     .matches(/^[0-9]+$/, "Tylko cyfry / Only digits / Лише цифри")
-    .length(11, "PESEL musi mieć 11 cyfr / PESEL must have 11 digits / PESEL має містити 11 цифр")
-    .required("Wymagane / Required / Обов’язково"),
-  zdazenie: Yup.string().required("Wymagane / Required / Обов’язково"),
-  dataZdazenia: Yup.date().required("Wymagane / Required / Обов’язково"),
-  oznaczenieAktuMalzenstwa: Yup.string().required("Wymagane / Required / Обов’язково"),
-  oznaczenieUrzeduStanuCywilnego: Yup.string().required("Wymagane / Required / Обов’язково"),
+    .length(11, "PESEL musi mieć 11 cyfr / PESEL must have 11 digits / PESEL має містити 11 цифр"),
+  zdazenie: Yup.string(),
+  dataZdazenia: Yup.date(),
+  oznaczenieAktuMalzenstwa: Yup.string(),
+  oznaczenieUrzeduStanuCywilnego: Yup.string(),
   version: Yup.string().required("Wymagane / Required / Обов’язково"),
   adresElektroniczny: Yup.string().email("Niepoprawny email / Invalid email / Невірний email"),
 });
@@ -274,22 +272,27 @@ export default function PeselForm() {
             )}
         
             {/* 🔹 Zdarzenia / Events affecting marriage / Події, що впливають на шлюб */}
-            <h3 className={css.sectionTitle}>Ostatnie zdarzenie mające wpływ na małżeństwo / Last event affecting marriage / Остання подія, що вплинула на шлюб</h3>
-            <RadioGroup
-              label="Zdarzenie / Event / Подія"
-              name="zdazenie"
-              options={[
-                { value: "zawarcie-związku", label: "Zawarcie związku małżeńskiego / Marriage / Шлюб" },
-                { value: "rozwiązanie-związku", label: "Rozwiązanie małżeństwa / Divorce / Розірвання шлюбу" },
-                { value: "unieważnienie-związku", label: "Unieważnienie związku małżeńskiego / Annulment of marriage / Визнання шлюбу недійсним" },
-                { value: "zgon-małżonka", label: "Zgon małżonka (zaznacz, jeśli znasz datę zgonu) / Death of spouse (check if you know the date of death) / Смерть чоловіка або дружини (вкажіть, якщо знаєте дату смерті)" },
-                { value: "zgon-małżonka-bez-daty-zgonu", label: "Zgon małżonka - znalezienie zwłok (zaznacz, jeśli małżonek zmarł, ale znasz jedynie datę znalezienia ciała) / Death of spouse – body found (check if spouse died but you only know the date the body was found) / Смерть чоловіка або дружини – виявлення тіла (вкажіть, якщо чоловік або дружина померли, але відома лише дата виявлення тіла)" },
-              ]}
-              {...{ values, setFieldValue, handleFieldChange }}
-            />
-            <FieldBlock name="dataZdazenia" type="date" label="Data zdarzenia / Event date / Дата події" placeholder="RRRR-MM-DD" {...{ values, setFieldValue, handleFieldChange }} />
-            <FieldBlock name="oznaczenieAktuMalzenstwa" label="Oznaczenie aktu małżeństwa albo sygnatura akt sądu, który rozwiązał/unieważnił małżeństwo, albo numer aktu zgonu małżonka / Marriage certificate reference or court file reference that dissolved/annulled the marriage, or spouse’s death certificate number / Номер акту шлюбу або номер справи суду, який розірвав/визнaв шлюб недійсним, або номер свідоцтва про смерть подружжя" placeholder="np. 123/2020" {...{ values, setFieldValue, handleFieldChange }} />
-            <FieldBlock name="oznaczenieUrzeduStanuCywilnego" label="Oznaczenie urzędu stanu cywilnego, w którym sporządzono akt małżeństwa albo akt zgonu, albo oznaczenie sądu, który rozwiązał/unieważnił małżeństwo / Registry office where the marriage or death certificate was issued, or court that dissolved/annulled the marriage / Орган РАЦС, де видано акт шлюбу або свідоцтво про смерть, або суд, який розірвав/визнaв шлюб недійсним" placeholder="np. Urząd Stanu Cywilnego Warszawa" {...{ values, setFieldValue, handleFieldChange }} />
+            {values.stanCywilny && values.stanCywilny !== "kawaler-panna" &&(
+            <>
+              <h3 className={css.sectionTitle}>
+                Ostatnie zdarzenie mające wpływ na małżeństwo / Last event affecting marriage / Остання подія, що вплинула на шлюб
+              </h3>
+              <RadioGroup
+                label="Zdarzenie / Event / Подія"
+                name="zdarzenie"
+                options={[
+                  { value: "zawarcie-związku", label: "Zawarcie związku małżeńskiego / Marriage / Шлюб" },
+                  { value: "rozwiązanie-związku", label: "Rozwiązanie małżeństwa / Divorce / Розірвання шлюбу" },
+                  { value: "unieważnienie-związku", label: "Unieważnienie związku małżeńskiego / Annulment of marriage / Визнання шлюбу недійсним" },
+                  { value: "zgon-małżonka", label: "Zgon małżonka (zaznacz, jeśli znasz datę zgonu) / Death of spouse (check if you know the date of death) / Смерть чоловіка або дружини (вкажіть, якщо знаєте дату смерті)" },
+                  { value: "zgon-małżonka-bez-daty-zgonu", label: "Zgon małżonka - znalezienie zwłok (zaznacz, jeśli małżonek zmarł, ale znasz jedynie datę znalezienia ciała) / Death of spouse – body found (check if spouse died but you only know the date the body was found) / Смерть чоловіка або дружини – виявлення тіла (вкажіть, якщо чоловік або дружина померли, але відома лише дата виявлення тіла)" },
+                ]}
+                {...{ values, setFieldValue, handleFieldChange }}
+              />
+              <FieldBlock name="dataZdazenia" type="date" label="Data zdarzenia / Event date / Дата події" placeholder="RRRR-MM-DD" {...{ values, setFieldValue, handleFieldChange }} />
+              <FieldBlock name="oznaczenieAktuMalzenstwa" label="Oznaczenie aktu małżeństwa albo sygnatura akt sądu, który rozwiązał/unieważnił małżeństwo, albo numer aktu zgonu małżonka / Marriage certificate reference or court file reference that dissolved/annulled the marriage, or spouse’s death certificate number / Номер акту шлюбу або номер справи суду, який розірвав/визнaв шлюб недійсним, або номер свідоцтва про смерть подружжя" placeholder="np. 123/2020" {...{ values, setFieldValue, handleFieldChange }} />
+              <FieldBlock name="oznaczenieUrzeduStanuCywilnego" label="Oznaczenie urzędu stanu cywilnego, w którym sporządzono akt małżeństwa albo akt zgonu, albo oznaczenie sądu, który rozwiązał/unieważnił małżeństwo / Registry office where the marriage or death certificate was issued, or court that dissolved/annulled the marriage / Орган РАЦС, де видано акт шлюбу або свідоцтво про смерть, або суд, який розірвав/визнaв шлюб недійсним" placeholder="np. Urząd Stanu Cywilnego Warszawa" {...{ values, setFieldValue, handleFieldChange }} />
+            </>)}
           </div>
         
           {/* 🔹 Forma dokumentu / Form of notification / Форма повідомлення */}
@@ -307,14 +310,11 @@ export default function PeselForm() {
           )}
         
           {/* 🔹 Кнопки */}
-          <div className={css.buttons}>
-            <button type="submit">📄 Pobierz PDF / Download PDF / Завантажити PDF</button>
-            <button type="button" onClick={() => { resetForm(); setSavedValues(defaultValues); localStorage.removeItem("peselFormData"); }}>
-              🧹 Wyczyść / Clear / Очистити
-            </button>
-          </div>
-        </Form>
-        
+          <ButtonsGroup 
+          resetForm={resetForm} 
+          setSavedValues={setSavedValues} 
+          localStorageKey="peselFormData" />
+        </Form>        
         
         )}
       </Formik>

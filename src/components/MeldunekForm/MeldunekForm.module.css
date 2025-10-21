@@ -35,22 +35,6 @@
     font-weight: 600;
   }
   
-  /* ====== Сетка ====== */
-  .formGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 25px 30px;
-  }
-  
-  @media (max-width: 900px) {
-    .formGrid {
-      grid-template-columns: 1fr;
-    }
-  
-    .formBox {
-      padding: 30px 25px;
-    }
-  }
   
   /* ====== Поля ====== */
   .fieldWrapper {

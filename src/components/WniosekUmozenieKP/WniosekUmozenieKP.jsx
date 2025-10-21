@@ -4,6 +4,7 @@ import * as Yup from "yup";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { fillPdf } from "../utils/wniosekUmozenieKPHelper.js";
 import css from "./WniosekUmozenieKP.module.css";
+import ButtonsGroup from "../ui/ButtonsGroup/ButtonsGroup.jsx";
 
 // ✅ Валидатор польских букв
 const polishRegex = /^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$/;
@@ -166,20 +167,11 @@ export default function WniosekUmorzenieKP() {
 
             {/* Przyciski */}
             <div className={css.buttons}>
-              <button type="submit" className={css.buttonMain}>
-                📄 Pobierz PDF / Download PDF / Завантажити PDF
-              </button>
-              <button
-                type="button"
-                className={css.buttonClear}
-                onClick={() => {
-                  resetForm();
-                  setSavedValues(defaultValues);
-                  localStorage.removeItem("wniosekUmorzenieKP");
-                }}
-              >
-                🧹 Wyczyść / Clear / Очистити
-              </button>
+            <ButtonsGroup
+              resetForm={resetForm}
+              setSavedValues={setSavedValues}
+              localStorageKey="wniosekUmorzenieKP"
+            />
             </div>
           </Form>
         )}
