@@ -14,7 +14,7 @@ const validationSchema = Yup.object().shape({
   imieNazwisko: Yup.string()
     .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
     .required("Wymagane / Required / Обов’язково"),
-  dataUrodzenia: Yup.string().required("Wymagane / Required / Обов’язково"),
+  dataUrodzenia: Yup.string().required("Wymagane / Required / Обов'язково"),
   ulica: Yup.string()
     .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
     .required("Wymagane / Required / Обов’язково"),
@@ -148,7 +148,7 @@ export default function WniosekUmorzenieKP() {
             />
             <FieldBlock
               name="numerUlicy"
-              label="Numer ulicy / House Number / Номер будинку"
+              label="Numer / House Number / Номер будинку"
               placeholder="10A"
               {...{ values, setFieldValue, handleFieldChange }}
             />

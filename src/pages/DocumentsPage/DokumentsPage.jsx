@@ -23,7 +23,7 @@ export default function DocumentsPage() {
         </div>
 
         <div className={css.homeButtons}> 
-        <Link className={css.btn} to="/umozenie">📝 Umozenie</Link>
+        <Link className={css.btn} to="/umozenie">📝 Umorzenie</Link>
         </div>
 
       </div>

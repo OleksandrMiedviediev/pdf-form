@@ -225,12 +225,12 @@ export default function PeselForm() {
             )}
 
                         {/* 🔹 Dokument podróży cudzoziemca lub inny dokument potwierdzający tożsamość i obywatelstwo */}
-                        <h3 className={css.sectionTitle}>Dokument podróży cudzoziemca lub inny dokument potwierdzający tożsamość i obywatelstwo</h3>
+                        <h3 className={css.sectionTitle}>Dokument podróży cudzoziemca lub inny dokument potwierdzający tożsamość i obywatelstwo / Foreigner’s travel document or another document confirming identity and citizenship / Документ для подорожі іноземця або інший документ, що підтверджує особу та громадянство</h3>
             <FieldBlock name="numerPodrozy" label="Numer dokumentu podróży / Travel document number / Номер проїзного документа" placeholder="np. TR123456" {...{ values, setFieldValue, handleFieldChange }} />
             <FieldBlock name="dataWaznosciPodrozy" type="date" label="Data ważności dokumentu podróży / Expiry date of travel document / Термін дії проїзного документа" placeholder="RRRR-MM-DD" {...{ values, setFieldValue, handleFieldChange }} />
 
             {/* 🔹 Dodatkowe dane osoby, której wniosek dotyczy, oraz dane jej rodziców */}
-              <h3 className={css.sectionTitle}>Dodatkowe dane osoby, której wniosek dotyczy, oraz dane jej rodziców</h3>
+              <h3 className={css.sectionTitle}>Dodatkowe dane osoby, której wniosek dotyczy, oraz dane jej rodziców / Additional data of the person to whom the application refers and data of their parents / Додаткові дані особи, якої стосується заява, та дані її батьків</h3>
               <FieldBlock name="nazwiskoRodowe" label="Nazwisko rodowe / Maiden name / Дівоче прізвище" placeholder="np. Kowalska" {...{ values, setFieldValue, handleFieldChange }} />
               <FieldBlock name="miejsceUrodzenia" label="Miejsce urodzenia / Place of birth / Місце народження" placeholder="np. Warszawa" {...{ values, setFieldValue, handleFieldChange }} />
               <FieldBlock name="oznaczenieAktuUrodzenia" label="Oznaczenie urzędu stanu cywilnego, w którym został sporządzony akt urodzenia / Birth certificate reference / Номер свідоцтва про народження" placeholder="np. 123/2020" {...{ values, setFieldValue, handleFieldChange }} />
