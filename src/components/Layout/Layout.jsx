@@ -4,7 +4,9 @@ import {Suspense} from 'react'
 import css from "./Layout.module.css"
 import Footer from "../Footer/Footer.jsx"
 
+
 export default function Layout({children}) {
+
     return (
         
         <div>

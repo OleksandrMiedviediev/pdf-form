@@ -6,6 +6,7 @@ import InfoMeldunek from "../InfoMeldunek/InfoMeldunek.jsx";
 import Input from "../ui/Input/Input.jsx";
 import css from "./MeldunekForm.module.css";
 import ButtonsGroup from "../ui/ButtonsGroup/ButtonsGroup.jsx";
+import { useTranslation } from "react-i18next";
 
 const polishRegex = /^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$/;
 
@@ -64,28 +65,29 @@ const MeldunekSchema = Yup.object().shape({
   dataKoncowa: Yup.date().required("Wymagane / Required / Обов'язково"),
 });
 
-const fields = [
-  { name: "nazwisko", label: "Nazwisko / Surname / Прізвище", placeholder: "Kowalski", autoComplete: "family-name" },
-  { name: "imie", label: "Imię / Name / Імʼя", placeholder: "Jan", autoComplete: "given-name" },
-  { name: "pesel", label: "PESEL", placeholder: "12345678901", autoComplete: "off" },
-  { name: "krajUrodzenia", label: "Kraj urodzenia / Country of birth / Країна народження", placeholder: "Polska", autoComplete: "country-name" },
-  { name: "dataUrodzenia", label: "Data urodzenia / Date of birth / Дата народження", type: "date", autoComplete: "off" },
-  { name: "miejsceUrodzenia", label: "Miejsce urodzenia / Place of birth / Місто народження", placeholder: "Warszawa", autoComplete: "address-level2" },
-  { name: "krajMiejscaZamieszkania", label: "Kraj miejsca zamieszkania / Country of residence / Країна проживання", placeholder: "Polska", autoComplete: "country-name" },
-  { name: "telefon", label: "Telefon / Phone / Телефон", placeholder: "600123456", autoComplete: "tel" },
-  { name: "email", label: "Email / Електронна пошта", placeholder: "jan@example.com", autoComplete: "email" },
-  { name: "ulica", label: "Ulica / Street / Вулиця", placeholder: "Marszałkowska", autoComplete: "street-address" },
-  { name: "numerDomu", label: "Numer domu / House number / Номер будинку", placeholder: "10", autoComplete: "off" },
-  { name: "numerLokalu", label: "Numer lokalu / Apartment number / Номер квартири", placeholder: "5", autoComplete: "off" },
-  { name: "kodPocztowy", label: "Kod pocztowy / Postal code / Поштовий індекс", placeholder: "00-001", autoComplete: "postal-code" },
-  { name: "miejscowoscDzielnica", label: "Miejscowość / City / Місто", placeholder: "Warszawa", autoComplete: "address-level2" },
-  { name: "gmina", label: "Gmina / Municipality / Гміна", placeholder: "Śródmieście", autoComplete: "off" },
-  { name: "wojewodztwo", label: "Województwo / Province / Область", placeholder: "Mazowieckie", autoComplete: "address-level1" },
-  { name: "dataPoczatkowa", label: "Data początkowa / Start date / Дата початку", type: "date", autoComplete: "off" },
-  { name: "dataKoncowa", label: "Data końcowa / End date / Дата закінчення", type: "date", autoComplete: "off" },
-];
 
 export default function MeldunekForm() {
+  const {t} = useTranslation('meldunekForm')
+  const fields = [
+    { name: "nazwisko", label: t('labels.nazwisko'), placeholder: "Kowalski", autoComplete: "family-name" },
+    { name: "imie", label: t('labels.imie'), placeholder: "Jan", autoComplete: "given-name" },
+    { name: "pesel", label: t('labels.pesel'), placeholder: "12345678901", autoComplete: "off" },
+    { name: "krajUrodzenia", label: t('labels.krajUrodzenia'), placeholder: "Polska", autoComplete: "country-name" },
+    { name: "dataUrodzenia", label: t('labels.dataUrodzenia'), type: "date", autoComplete: "off" },
+    { name: "miejsceUrodzenia", label: t('labels.miejsceUrodzenia'), placeholder: "Warszawa", autoComplete: "address-level2" },
+    { name: "krajMiejscaZamieszkania", label: t('labels.krajMiejscaZamieszkania'), placeholder: "Polska", autoComplete: "country-name" },
+    { name: "telefon", label: t('labels.telefon'), placeholder: "600123456", autoComplete: "tel" },
+    { name: "email", label: t('labels.email'), placeholder: "jan@example.com", autoComplete: "email" },
+    { name: "ulica", label: t('labels.ulica'), placeholder: "Marszałkowska", autoComplete: "street-address" },
+    { name: "numerDomu", label: t('labels.numerDomu'), placeholder: "10", autoComplete: "off" },
+    { name: "numerLokalu", label: t('labels.numerLokalu'), placeholder: "5", autoComplete: "off" },
+    { name: "kodPocztowy", label: t('labels.kodPocztowy'), placeholder: "00-001", autoComplete: "postal-code" },
+    { name: "miejscowoscDzielnica", label: t('labels.miejscowoscDzielnica'), placeholder: "Warszawa", autoComplete: "address-level2" },
+    { name: "gmina", label: t('labels.gmina'), placeholder: "Śródmieście", autoComplete: "off" },
+    { name: "wojewodztwo", label: t('labels.wojewodztwo'), placeholder: "Mazowieckie", autoComplete: "address-level1" },
+    { name: "dataPoczatkowa", label: t('labels.dataPoczatkowa'), type: "date", autoComplete: "off" },
+    { name: "dataKoncowa", label: t('labels.dataKoncowa'), type: "date", autoComplete: "off" },
+  ];
   const [savedValues, setSavedValues] = useState(() => {
     const saved = localStorage.getItem("meldunekForm");
     return saved ? JSON.parse(saved) : fields.reduce((a, f) => ({ ...a, [f.name]: "" }), {});
@@ -100,20 +102,10 @@ export default function MeldunekForm() {
   return (
 
     <div className={css.formBox}>
-        <h2>Zgłoszenie pobytu czasowego / Temporary residence registration / Заявка на тимчасове проживання</h2>
+        <h2>{t('title')}</h2>
         <div className={css.infoText}>
             <p>
-                Jeśli mieszkasz w Polsce – zamelduj się na pobyt stały lub czasowy (czyli powyżej 3 miesięcy). 
-                Nie musisz się meldować, jeśli wiesz, że twój pobyt w Polsce nie będzie trwał dłużej niż 30 dni – 
-                na przykład, gdy spędzasz w Polsce urlop.
-            </p>
-            <p>
-                If you live in Poland – register for permanent or temporary residence (i.e., over 3 months). 
-                You do not need to register if your stay in Poland will not exceed 30 days – for example, when you are on vacation in Poland.
-            </p>
-            <p>
-                Якщо ви живете в Польщі – зареєструйтеся для постійного або тимчасового проживання (тобто понад 3 місяці). 
-                Реєструватися не потрібно, якщо ваше перебування в Польщі не триватиме більше 30 днів – наприклад, коли ви проводите відпустку в Польщі.
+                {t('description')}
             </p>
         </div>
 

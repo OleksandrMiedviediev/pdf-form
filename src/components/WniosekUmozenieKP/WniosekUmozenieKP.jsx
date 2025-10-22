@@ -5,6 +5,7 @@ import { AiOutlineCloseCircle } from "react-icons/ai";
 import { fillPdf } from "../utils/wniosekUmozenieKPHelper.js";
 import css from "./WniosekUmozenieKP.module.css";
 import ButtonsGroup from "../ui/ButtonsGroup/ButtonsGroup.jsx";
+import { useTranslation } from "react-i18next";
 
 // ✅ Валидатор польских букв
 const polishRegex = /^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$/;
@@ -60,9 +61,11 @@ export default function WniosekUmorzenieKP() {
     localStorage.setItem("wniosekUmorzenieKP", JSON.stringify(updated));
   };
 
+  const {t} = useTranslation('wniosekUmozenieKP')
+
   return (
     <div className={css.formWrapper}>
-      <h1 className={css.title}>📝 Wniosek o umorzenie / Application for Cancellation / Заява на скасування</h1>
+      <h1 className={css.title}>📝 {t('title')}</h1>
 
       <Formik
         initialValues={savedValues}
@@ -73,49 +76,49 @@ export default function WniosekUmorzenieKP() {
         {({ values, setFieldValue, resetForm }) => (
           <Form className={css.form}>
             {/* Sekcja Wnioskodawca */}
-            <h3 className={css.sectionTitle}>Dane wnioskodawcy / Applicant Data / Дані заявника</h3>
+            <h3 className={css.sectionTitle}>{t('sections.applicant')}</h3>
             <FieldBlock
               name="imieNazwisko"
-              label="Imię i nazwisko / Full Name / ПІ"
-              placeholder="Jan Kowalski / John Smith / Іван Ковальський"
+              label={t('labels.imieNazwisko')}
+              placeholder="Jan Kowalski"
               {...{ values, setFieldValue, handleFieldChange }}
             />
             <FieldBlock
               name="dataUrodzenia"
               type="date"
-              label="Data urodzenia / Date of Birth / Дата народження"
+              label={t('labels.dataUrodzenia')}
               {...{ values, setFieldValue, handleFieldChange }}
             />
             <FieldBlock
               name="obywatelstwo"
-              label="Obywatelstwo / Citizenship / Громадянство"
-              placeholder="Polska / Poland / Польща"
+              label={t('labels.obywatelstwo')}
+              placeholder="Polska"
               {...{ values, setFieldValue, handleFieldChange }}
             />
             <FieldBlock
               name="nrSprawy"
-              label="Numer sprawy / Case Number / Номер справи"
+              label={t('labels.nrSprawy')}
               placeholder="SO-VII.1234.12.20"
               {...{ values, setFieldValue, handleFieldChange }}
             />
 
             {/* Sekcja urząd */}
-            <h3 className={css.sectionTitle}>Dane urzędu / Office Data / Дані установи</h3>
+            <h3 className={css.sectionTitle}>{t('sections.office')}</h3>
             <FieldBlock
               name="miejscowoscUrzedu"
-              label="Miejscowość urzędu / City / Місто"
-              placeholder="Warszawa / Warsaw / Варшава"
+              label={t('labels.miejscowoscUrzedu')}
+              placeholder="Warszawa"
               {...{ values, setFieldValue, handleFieldChange }}
             />
             <FieldBlock
               name="dataWypelnienia"
               type="date"
-              label="Data wypełnienia / Date Filled / Дата заповнення"
+              label={t('labels.dataWypelnienia')}
               {...{ values, setFieldValue, handleFieldChange }}
             />
 
             {/* Przedmiot udzielenia */}
-            <h3 className={css.sectionTitle}>Przedmiot udzielenia / Subject / Предмет</h3>
+            <h3 className={css.sectionTitle}>{t('sections.subject')}</h3>
             <div className={css.single}>
               <Field
                 as="select"
@@ -124,44 +127,44 @@ export default function WniosekUmorzenieKP() {
                 value={values.przedmiotUdzielenia}
                 onChange={(e) => setFieldValue("przedmiotUdzielenia", e.target.value)}
               >
-                <option value="">-- wybierz / choose / оберіть --</option>
+                <option value="">{t('options.default')}</option>
                 <option value="zezwolenia na pobyt czasowy">
-                  Zezwolenie na pobyt czasowy / Temporary Stay Permit / Дозвіл на тимчасове перебування
+                {t('options.czasowy')}
                 </option>
                 <option value="pobyt stały">
-                  Pobyt stały / Permanent Stay / Постійне проживання
+                {t('options.staly')}
                 </option>
                 <option value="pobyt rezydenta długoterminowego UE">
-                  Pobyt rezydenta długoterminowego UE / EU Long-Term Resident / Довгострокове перебування в ЄС
+                {t('options.ue')}
                 </option>
               </Field>
             </div>
 
 
             {/* Adres wnioskodawcy */}
-            <h3 className={css.sectionTitle}>Adres do korespondencji / Correspondence Address / Адреса для кореспонденції</h3>
+            <h3 className={css.sectionTitle}>{t('sections.address')}</h3>
             <FieldBlock
               name="ulica"
-              label="Ulica / Street / Вулиця"
-              placeholder="Marszałkowska / Main Street / Головна"
+              label={t('labels.ulica')}
+              placeholder="Marszałkowska"
               {...{ values, setFieldValue, handleFieldChange }}
             />
             <FieldBlock
               name="numerUlicy"
-              label="Numer / House Number / Номер будинку"
+              label={t('labels.numerUlicy')}
               placeholder="10A"
               {...{ values, setFieldValue, handleFieldChange }}
             />
             <FieldBlock
               name="kodPocztowy"
-              label="Kod pocztowy / Postal Code / Поштовий індекс"
+              label={t('labels.kodPocztowy')}
               placeholder="00-123"
               {...{ values, setFieldValue, handleFieldChange }}
             />
             <FieldBlock
               name="miejscowoscWnioskodawcy"
-              label="Miejscowość / City / Місто"
-              placeholder="Warszawa / Warsaw / Варшава"
+              label={t('labels.miejscowoscWnioskodawcy')}
+              placeholder="Warszawa"
               {...{ values, setFieldValue, handleFieldChange }}
             />
 

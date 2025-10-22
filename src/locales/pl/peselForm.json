@@ -1,0 +1,98 @@
+{
+    "title": "🧾 Wniosek o nadanie numeru PESEL",
+    "applicantSection": "Wnioskodawca",
+    "addressSection": "Adres do korespondencji osoby, która składa wniosek",
+    "personSection": "Dane osoby, której dotyczy wniosek",
+    "citizenshipSection": "Obywatelstwo",
+    "additionalSection": "Dodatkowe dane osoby, której wniosek dotyczy, oraz dane jej rodziców",
+    "maritalStatusSection": "Dane o stanie cywilnym osoby, której wniosek dotyczy",
+    "formSection": "Forma powiadomienia",
+    "sectionTitle": "Ostatnio wydany paszport obywatela polskiego",
+    "sectionTitleDP":"Dokument podróży cudzoziemca lub inny dokument potwierdzający tożsamość i obywatelstwo",
+    "sectionTitleDDO":"Dodatkowe dane osoby, której wniosek dotyczy, oraz dane jej rodziców",
+    "sectionTitleDSC":"Dane o stanie cywilnym osoby, której wniosek dotyczy",
+    "sectionTitleOWD":"Ostatnio wydany dowód osobisty obywatela polskiego",
+    "sectionTitleDOSC":"Dane o stanie cywilnym osoby, której wniosek dotyczy",
+    "sectionTitleOZ":"Ostatnie zdarzenie mające wpływ na małżeństwo",
+    "sectionTitleFP":"Forma powiadomienia",
+  
+    "labels": {
+      "imie": "Imię",
+      "nazwisko": "Nazwisko",
+      "ulica": "Ulica",
+      "numerDomu": "Numer domu",
+      "numerLokalu": "Numer lokalu",
+      "kodPocztowy": "Kod pocztowy",
+      "miejscowosc": "Miejscowość",
+      "plec": "Płeć",
+      "dataUrodzenia": "Data urodzenia",
+      "krajUrodzenia": "Kraj urodzenia",
+      "adresElektroniczny": "Adres elektroniczny",
+      "obywatelstwo": "Obywatelstwo",
+      "imiePierwszeKtorejDotyczyWniosek":"Imię pierwsze",
+      "imieDrugieKtorejDotyczyWniosek":"Imię drugie",
+      "imieKolejneKtorejDotyczyWniosek":"Imię kolejne",
+      "krajMiejscaZamieszkania":"Kraj zamieszkania",
+      "obywatelstwoInne":"Podaj kraj",
+      "nazwiskoRodowe":"Nazwisko rodowe",
+      "miejsceUrodzenia":"Miejsce urodzenia",
+      "oznaczenieAktuUrodzenia":"Oznaczenie aktu urodzenia",
+      "oznaczenieUrzeduAktUrodzenia":"Oznaczenie urzędu stanu cywilnego, w którym został sporządzony akt urodzenia",
+      "imieOjca":"Imię ojca",
+      "nazwiskoRodoweOjca":"Nazwisko rodowe ojca",
+      "imieMatki":"Imię matki",
+      "nazwiskoRodoweMatki":"Nazwisko rodowe matki",
+      "numerDowodu":"Numer dowodu",
+      "dataWaznosciDowodu":"Data ważności dowodu",
+      "oznaczenieOrganuKtoryWydalDowod":"Organ wydający dowód",
+      "stanCywilny":"Stan cywilny",
+      "imieMalzonka":"Imię małżonka",
+      "nazwiskoRodoweMalzonka":"Nazwisko rodowe małżonka",
+      "numerPeselMalzonka":"PESEL małżonka",
+      "numerPaszportu":"Numer paszportu",
+      "dataWaznosciPaszportu":"Data ważności paszportu",
+      "numerPodrozy":"Numer dokumentu podróży",
+      "dataWaznosciPodrozy":"Data ważności dokumentu podróży",
+      "zdarzenie":"Zdarzenie",
+      "dataZdazenia":"Data zdarzenia",
+      "oznaczenieAktuMalzenstwa":"Oznaczenie aktu małżeństwa albo sygnatura akt sądu, który rozwiązał/unieważnił małżeństwo, albo numer aktu zgonu małżonka",
+      "oznaczenieUrzeduStanuCywilnego":"Oznaczenie urzędu stanu cywilnego, w którym sporządzono akt małżeństwa albo akt zgonu, albo oznaczenie sądu, który rozwiązał/unieważnił małżeństwo"
+
+
+    },
+  
+    "options": {
+      "plec": {
+        "kobieta": "Kobieta",
+        "mezczyzna": "Mężczyzna"
+      },
+      "obywatelstwo": {
+        "polskie": "Polskie",
+        "bezpanstwowiec": "Bezpaństwowiec",
+        "inne": "Inne"
+      },
+      "stanCywilny":{
+        "kawaler-panna":"Kawaler / Panna",
+        "żonaty-zamężna":"Żonaty / Zamężna",
+        "rozwiedziony-rozwiedziona":"Rozwiedziony / Rozwiedziona",
+        "wdowiec-wdowa":"Wdowiec / Wdowa"
+      },
+      "zdarzenie":{
+        "zawarcie-związku":"Zawarcie związku małżeńskiego",
+        "rozwiązanie-związku":"Rozwiązanie małżeństwa",
+        "unieważnienie-związku":"Unieważnienie związku małżeńskiego",
+        "zgon-małżonka":"Zgon małżonka (zaznacz, jeśli znasz datę zgonu)",
+        "zgon-małżonka-bez-daty-zgonu":"Zgon małżonka - znalezienie zwłok (zaznacz, jeśli małżonek zmarł, ale znasz jedynie datę znalezienia ciała)"
+      },
+      "version": {
+        "papierowa": "Papierowa",
+        "elektroniczna": "Elektroniczna"
+      }
+    },
+  
+    "buttons": {
+      "submit": "Generuj PDF",
+      "reset": "Wyczyść formularz"
+    }
+  }
+  

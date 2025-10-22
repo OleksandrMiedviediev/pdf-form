@@ -1,0 +1,29 @@
+{
+    "title": "Wniosek o umorzenie",
+    "sections": {
+      "applicant": "Dane wnioskodawcy",
+      "office": "Dane urzędu",
+      "subject": "Przedmiot udzielenia",
+      "address": "Adres do korespondencji"
+    },
+    "labels": {
+      "imieNazwisko": "Imię i nazwisko",
+      "dataUrodzenia": "Data urodzenia",
+      "obywatelstwo": "Obywatelstwo",
+      "nrSprawy": "Numer sprawy",
+      "miejscowoscUrzedu": "Miejscowość urzędu",
+      "dataWypelnienia": "Data wypełnienia",
+      "przedmiotUdzielenia": "Przedmiot udzielenia",
+      "ulica": "Ulica",
+      "numerUlicy": "Numer",
+      "kodPocztowy": "Kod pocztowy",
+      "miejscowoscWnioskodawcy": "Miejscowość"
+    },
+    "options": {
+      "default": "--- wybierz ---",
+      "czasowy": "Zezwolenie na pobyt czasowy",
+      "staly": "Pobyt stały",
+      "ue": "Pobyt rezydenta długoterminowego UE"
+    }
+  }
+  

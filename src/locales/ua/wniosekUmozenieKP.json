@@ -1,0 +1,29 @@
+{
+    "title": "Заява на скасування",
+    "sections": {
+      "applicant": "Дані заявника",
+      "office": "Дані установи",
+      "subject": "Предмет",
+      "address": "Адреса для кореспонденції"
+    },
+    "labels": {
+      "imieNazwisko": "ПІБ",
+      "dataUrodzenia": "Дата народження",
+      "obywatelstwo": "Громадянство",
+      "nrSprawy": "Номер справи",
+      "miejscowoscUrzedu": "Місто установи",
+      "dataWypelnienia": "Дата заповнення",
+      "przedmiotUdzielenia": "Предмет",
+      "ulica": "Вулиця",
+      "numerUlicy": "Номер будинку",
+      "kodPocztowy": "Поштовий індекс",
+      "miejscowoscWnioskodawcy": "Місто"
+    },
+    "options": {
+      "default": "--- оберіть ---",
+      "czasowy": "Дозвіл на тимчасове перебування",
+      "staly": "Постійне проживання",
+      "ue": "Довгострокове перебування в ЄС"
+    }
+  }
+  

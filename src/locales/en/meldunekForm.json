@@ -1,0 +1,24 @@
+{
+    "title": "Temporary residence registration",
+    "description": "If you live in Poland – register for permanent or temporary residence (i.e., over 3 months). You do not need to register if your stay in Poland will not exceed 30 days – for example, when you are on vacation in Poland.",
+    "labels": {
+        "nazwisko": "Surname",
+        "imie": "Name",
+        "pesel": "PESEL",
+        "krajUrodzenia": "Country of birth",
+        "dataUrodzenia": "Date of birth",
+        "miejsceUrodzenia": "Place of birth",
+        "krajMiejscaZamieszkania": "Country of residence",
+        "telefon": "Phone",
+        "email": "Email",
+        "ulica": "Street",
+        "numerDomu": "House number",
+        "numerLokalu": "Apartment number",
+        "kodPocztowy": "Postal code",
+        "miejscowoscDzielnica": "City",
+        "gmina": "Municipality",
+        "wojewodztwo": "Province",
+        "dataPoczatkowa": "Start date",
+        "dataKoncowa": "End date"
+    }
+}

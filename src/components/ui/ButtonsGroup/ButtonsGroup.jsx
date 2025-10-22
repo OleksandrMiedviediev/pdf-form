@@ -1,5 +1,6 @@
 import React from "react";
 import css from "./ButtonsGroup.module.css";
+import { useTranslation } from "react-i18next";
 
 export default function ButtonsGroup({ resetForm, setSavedValues, localStorageKey, fields }) {
   const handleClear = () => {
@@ -14,14 +15,14 @@ export default function ButtonsGroup({ resetForm, setSavedValues, localStorageKe
       localStorage.removeItem(localStorageKey);
     }
   };
-
+const {t} = useTranslation('buttonsGroup')
   return (
     <div className={css.buttons}>
       <button type="submit" className={css.buttonMain}>
-        📄 Pobierz PDF / Download PDF / Завантажити PDF
+        📄 {t('buttonMain')}
       </button>
       <button type="button" className={css.buttonClear} onClick={handleClear}>
-        🧹 Wyczyść / Clear / Очистити
+        🧹 {t('buttonClear')}
       </button>
     </div>
   );

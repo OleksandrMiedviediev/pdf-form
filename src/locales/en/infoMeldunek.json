@@ -1,0 +1,33 @@
+{
+    "accordionPOne": "You can register yourself or via an authorized person. The authorization must be given in writing.",
+    "accordionPTwo": "A parent, legal guardian, or actual caregiver at the same residence can register a person who:",
+    "liOne": "has no legal capacity (fully incapacitated persons, children under 13)",
+    "liTwo": "has limited legal capacity (partially incapacitated persons, children aged 13–18)",
+  
+    "headerOne": "Who submits documents?",
+    "headerTwo": "What to prepare?",
+  
+    "prepareTextOne": "Temporary residence registration form, valid travel document, visa.",
+    "prepareTextTwo": "If you are in Poland visa-free or awaiting a decision on temporary or permanent residence, prepare:",
+    "prepareList": {
+      "main": "valid travel document",
+      "oneOf": "ONE of the following documents:",
+      "items": [
+        "temporary foreigner ID",
+        "residence card",
+        "temporary residence permit",
+        "permanent residence permit",
+        "long-term EU resident permit",
+        "refugee or complementary protection decision"
+      ],
+      "ownership": "If you own the apartment or have other legal title, prepare ONE document, e.g.:",
+      "ownershipItems": [
+        "rental agreement",
+        "land and mortgage register excerpt",
+        "administrative decision",
+        "court judgment"
+      ],
+      "other": "If registering another person, also prepare authorization and identity document."
+    }
+  }
+  

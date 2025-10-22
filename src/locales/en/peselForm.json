@@ -1,0 +1,96 @@
+{
+    "title": "🧾 PESEL Application Form",
+    "applicantSection": "Applicant",
+    "addressSection": "Correspondence address of the applicant",
+    "personSection": "Person concerned",
+    "citizenshipSection": "Citizenship",
+    "additionalSection": "Additional data and parents’ details",
+    "maritalStatusSection": "Marital status of the person concerned",
+    "formSection": "Form of notification",
+    "sectionTitle": "Most recently issued passport of a Polish citizen",
+    "sectionTitleDP":"Foreigner’s travel document or another document confirming identity and citizenship",
+    "sectionTitleDDO":"Additional data of the person to whom the application refers and data of their parents",
+    "sectionTitleDSC":"Marital status of the person the application concerns",
+    "sectionTitleOWD":"Most recently issued ID card of a Polish citizen",
+    "sectionTitleDOSC":"Marital status of the person the application concerns",
+    "sectionTitleOZ":"Last event affecting marriage",
+    "sectionTitleFP":"Form of notification",
+  
+    "labels": {
+      "imie": "First name",
+      "nazwisko": "Surname",
+      "ulica": "Street",
+      "numerDomu": "House number",
+      "numerLokalu": "Apartment number",
+      "kodPocztowy": "Postal code",
+      "miejscowosc": "City",
+      "plec": "Gender",
+      "dataUrodzenia": "Date of birth",
+      "krajUrodzenia": "Country of birth",
+      "adresElektroniczny": "Email address",
+      "obywatelstwo": "Citizenship",
+      "imiePierwszeKtorejDotyczyWniosek":"First name",
+      "imieDrugieKtorejDotyczyWniosek":"Second name",
+      "imieKolejneKtorejDotyczyWniosek":"Additional name",
+      "krajMiejscaZamieszkania":"Country of residence",
+      "obywatelstwoInne":"Specify country",
+      "nazwiskoRodowe":"Maiden name",
+      "miejsceUrodzenia":"Place of birth",
+      "oznaczenieAktuUrodzenia":"Birth certificate reference",
+      "oznaczenieUrzeduAktUrodzenia":"Registry office where the birth certificate was issued",
+      "imieOjca":"Father’s name",
+      "nazwiskoRodoweOjca":"Father’s family name",
+      "imieMatki":"Mother’s name",
+      "nazwiskoRodoweMatki":"Mother’s maiden name",
+      "numerDowodu":"ID number",
+      "dataWaznosciDowodu":"ID expiry date",
+      "oznaczenieOrganuKtoryWydalDowod":"Issuing authority",
+      "stanCywilny":"Marital status",
+      "imieMalzonka":"Spouse’s name",
+      "nazwiskoRodoweMalzonka":"Spouse’s maiden name",
+      "numerPeselMalzonka":"Spouse’s PESEL",
+      "numerPaszportu":"Passport number",
+      "dataWaznosciPaszportu":"Passport expiry date",
+      "numerPodrozy":"Travel document number",
+      "dataWaznosciPodrozy":"Expiry date of travel document",
+      "zdarzenie":"Event",
+      "dataZdazenia":"Event date",
+      "oznaczenieAktuMalzenstwa":"Marriage certificate reference or court file reference that dissolved/annulled the marriage, or spouse’s death certificate number",
+      "oznaczenieUrzeduStanuCywilnego":"Registry office where the marriage or death certificate was issued, or court that dissolved/annulled the marriage"
+    },
+  
+    "options": {
+      "plec": {
+        "kobieta": "Female",
+        "mezczyzna": "Male"
+      },
+      "obywatelstwo": {
+        "polskie": "Polish",
+        "bezpanstwowiec": "Stateless",
+        "inne": "Other"
+      },
+      "stanCywilny":{
+        "kawaler-panna":"Single",
+        "żonaty-zamężna":"Married",
+        "rozwiedziony-rozwiedziona":"Divorced",
+        "wdowiec-wdowa":"Widower / Widow"
+      },
+      "zdarzenie":{
+        "zawarcie-związku":"Marriage",
+        "rozwiązanie-związku":"Divorce",
+        "unieważnienie-związku":"Annulment of marriage",
+        "zgon-małżonka":"Death of spouse (check if you know the date of death)",
+        "zgon-małżonka-bez-daty-zgonu":"Death of spouse – body found (check if spouse died but you only know the date the body was found)"
+      },
+      "version": {
+        "papierowa": "Paper",
+        "elektroniczna": "Electronic"
+      }
+    },
+  
+    "buttons": {
+      "submit": "Generate PDF",
+      "reset": "Clear form"
+    }
+  }
+  

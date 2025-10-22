@@ -1,0 +1,29 @@
+{
+    "title": "Application for Cancellation",
+    "sections": {
+      "applicant": "Applicant Data",
+      "office": "Office Data",
+      "subject": "Subject",
+      "address": "Correspondence Address"
+    },
+    "labels": {
+      "imieNazwisko": "Full Name",
+      "dataUrodzenia": "Date of Birth",
+      "obywatelstwo": "Citizenship",
+      "nrSprawy": "Case Number",
+      "miejscowoscUrzedu": "City of Office",
+      "dataWypelnienia": "Date Filled",
+      "przedmiotUdzielenia": "Subject",
+      "ulica": "Street",
+      "numerUlicy": "House Number",
+      "kodPocztowy": "Postal Code",
+      "miejscowoscWnioskodawcy": "City"
+    },
+    "options": {
+      "default": "--- choose ---",
+      "czasowy": "Temporary Stay Permit",
+      "staly": "Permanent Stay",
+      "ue": "EU Long-Term Resident Permit"
+    }
+  }
+  

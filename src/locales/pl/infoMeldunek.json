@@ -1,0 +1,33 @@
+{
+    "accordionPOne": "Możesz zameldować się osobiście lub przez osobę upoważnioną. Upoważnienie musi być udzielone na piśmie.",
+    "accordionPTwo": "Rodzic, opiekun prawny lub faktyczny opiekun we wspólnym miejscu zamieszkania może zameldować osobę, która:",
+    "liOne": "nie ma zdolności do czynności prawnych (osoby całkowicie ubezwłasnowolnione, dzieci poniżej 13 lat)",
+    "liTwo": "ma ograniczoną zdolność do czynności prawnych (osoby częściowo ubezwłasnowolnione, dzieci w wieku 13–18 lat)",
+  
+    "headerOne": "Kto składa dokumenty?",
+    "headerTwo": "Co musisz przygotować?",
+  
+    "prepareTextOne": "Formularz zgłoszenia pobytu czasowego, ważny dokument podróży, wizę.",
+    "prepareTextTwo": "Jeśli jesteś w Polsce w ramach ruchu bezwizowego albo czekasz na wydanie decyzji w sprawie pobytu, przygotuj:",
+    "prepareList": {
+      "main": "ważny dokument podróży",
+      "oneOf": "JEDEN z poniższych dokumentów:",
+      "items": [
+        "tymczasowe zaświadczenie tożsamości cudzoziemca",
+        "kartę pobytu",
+        "zezwolenie na pobyt czasowy",
+        "zezwolenie na pobyt stały",
+        "zezwolenie na pobyt rezydenta długoterminowego UE",
+        "decyzję o nadaniu statusu uchodźcy lub ochrony"
+      ],
+      "ownership": "Jeśli jesteś właścicielem lub masz inny tytuł prawny do mieszkania, przygotuj JEDEN dokument, np.:",
+      "ownershipItems": [
+        "umowę najmu",
+        "odpis z księgi wieczystej",
+        "decyzję administracyjną",
+        "orzeczenie sądu"
+      ],
+      "other": "Jeśli meldujesz inną osobę, przygotuj również pełnomocnictwo i dokument tożsamości."
+    }
+  }
+  

@@ -1,0 +1,24 @@
+{
+    "title": "Zgłoszenie pobytu czasowego",
+    "description": "Jeśli mieszkasz w Polsce – zamelduj się na pobyt stały lub czasowy (czyli powyżej 3 miesięcy). Nie musisz się meldować, jeśli wiesz, że twój pobyt w Polsce nie będzie trwał dłużej niż 30 dni – na przykład, gdy spędzasz w Polsce urlop.",
+    "labels": {
+        "nazwisko": "Nazwisko",
+        "imie": "Imię",
+        "pesel": "PESEL",
+        "krajUrodzenia": "Kraj urodzenia",
+        "dataUrodzenia": "Data urodzenia",
+        "miejsceUrodzenia": "Miejsce urodzenia",
+        "krajMiejscaZamieszkania": "Kraj miejsca zamieszkania",
+        "telefon": "Telefon",
+        "email": "Email",
+        "ulica": "Ulica",
+        "numerDomu": "Numer domu",
+        "numerLokalu": "Numer lokalu",
+        "kodPocztowy": "Kod pocztowy",
+        "miejscowoscDzielnica": "Miejscowość",
+        "gmina": "Gmina",
+        "wojewodztwo": "Województwo",
+        "dataPoczatkowa": "Data początkowa",
+        "dataKoncowa": "Data końcowa"
+    }
+}
