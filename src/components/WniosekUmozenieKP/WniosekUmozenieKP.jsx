@@ -10,30 +10,6 @@ import { useTranslation } from "react-i18next";
 // ✅ Валидатор польских букв
 const polishRegex = /^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$/;
 
-// ✅ Схема валидации Yup с сообщениями на 3 языках
-const validationSchema = Yup.object().shape({
-  imieNazwisko: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  dataUrodzenia: Yup.string().required("Wymagane / Required / Обов'язково"),
-  ulica: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  obywatelstwo: Yup.string()
-  .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-  .required("Wymagane / Required / Обов’язково"),
-  nrSprawy: Yup.string().required("Wymagane / Required / Обов’язково"),
-  miejscowoscUrzedu: Yup.string()
-  .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-  .required("Wymagane / Required / Обов’язково"),
-  numerUlicy: Yup.string().required("Wymagane / Required / Обов’язково"),
-  kodPocztowy: Yup.string().required("Wymagane / Required / Обов’язково"),
-  przedmiotUdzielenia: Yup.string().required("Wymagane / Required / Обов’язково"),
-  miejscowoscWnioskodawcy: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-});
-
 const defaultValues = {
   imieNazwisko: "",
   dataUrodzenia: "",
@@ -63,6 +39,31 @@ export default function WniosekUmorzenieKP() {
 
   const {t} = useTranslation('wniosekUmozenieKP')
 
+// ✅ Схема валидации Yup с сообщениями на 3 языках
+const validationSchema = Yup.object().shape({
+  imieNazwisko: Yup.string()
+    .matches(polishRegex, t('umorzenieSchema.polishRegex'))
+    .required(t('umorzenieSchema.required')),
+  dataUrodzenia: Yup.date().max(new Date(),t('umorzenieSchema.dataUrodzenia')).required(t('umorzenieSchema.required')),
+  ulica: Yup.string()
+    .matches(polishRegex, t('umorzenieSchema.polishRegex'))
+    .required(t('umorzenieSchema.required')),
+  obywatelstwo: Yup.string()
+  .matches(polishRegex, t('umorzenieSchema.polishRegex'))
+  .required(t('umorzenieSchema.required')),
+  nrSprawy: Yup.string().required(t('umorzenieSchema.required')),
+  miejscowoscUrzedu: Yup.string()
+  .matches(polishRegex, t('umorzenieSchema.polishRegex'))
+  .required(t('umorzenieSchema.required')),
+  numerUlicy: Yup.string().required(t('umorzenieSchema.required')),
+  kodPocztowy: Yup.string()
+  .matches(/^[0-9]{2}-[0-9]{3}$/, t('umorzenieSchema.kodPocztowy'))
+  .required(t('umorzenieSchema.required')),
+  przedmiotUdzielenia: Yup.string().required(t('umorzenieSchema.required')),
+  miejscowoscWnioskodawcy: Yup.string()
+    .matches(polishRegex, t('umorzenieSchema.polishRegex'))
+    .required(t('umorzenieSchema.required')),
+});
   return (
     <div className={css.formWrapper}>
       <h1 className={css.title}>📝 {t('title')}</h1>
@@ -138,6 +139,7 @@ export default function WniosekUmorzenieKP() {
                 {t('options.ue')}
                 </option>
               </Field>
+              <ErrorMessage name="przedmiotUdzielenia" component="div" className={css.error} />
             </div>
 
 

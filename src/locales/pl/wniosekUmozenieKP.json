@@ -24,6 +24,17 @@
       "czasowy": "Zezwolenie na pobyt czasowy",
       "staly": "Pobyt stały",
       "ue": "Pobyt rezydenta długoterminowego UE"
+    },
+    "umorzenieSchema":{
+        "polishRegex":"Dozwolone tylko polskie litery",
+        "min":"Za krótkie",
+        "max":"Za długie",
+        "required":"Wymagane",
+        "matches":"Tylko cyfry",
+        "email":"Niepoprawny email",
+        "kodPocztowy":"Format: 00-000",
+        "pesel":"PESEL musi mieć 11 cyfr",
+        "dataUrodzenia":"Data nie może być w przyszłości"
     }
   }
   

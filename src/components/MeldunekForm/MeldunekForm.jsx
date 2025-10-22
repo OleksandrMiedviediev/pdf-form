@@ -50,7 +50,6 @@ const MeldunekSchema = Yup.object().shape({
     .matches(polishRegex, t('meldunekSchema.polishRegex'))
     .required(t('meldunekSchema.required')),
   numerDomu: Yup.string()
-    .matches(/^[0-9]+$/, t('meldunekSchema.matches'))
     .required(t('meldunekSchema.required')),
   numerLokalu: Yup.string(),
   kodPocztowy: Yup.string()
