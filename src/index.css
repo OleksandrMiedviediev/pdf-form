@@ -9,7 +9,15 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+body{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main{
+  flex: 1;
+  padding: 20px;
+}
 a {
   font-weight: 500;
   color: #646cff;
