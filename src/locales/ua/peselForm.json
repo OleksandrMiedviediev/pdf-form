@@ -92,6 +92,17 @@
     "buttons": {
       "submit": "Створити PDF",
       "reset": "Очистити форму"
+    },
+    "peselSchema":{
+        "polishRegex":"Лише польські літери",
+        "min":"За коротке",
+        "max":"За довге",
+        "required":"Обов'язково",
+        "matches":"Лише цифри",
+        "email":"Невірний email",
+        "kodPocztowy":"Формат: 00-000",
+        "pesel":"PESEL має містити 11 цифр",
+        "dataUrodzenia":"Дата народження не може бути в майбутньому"
     }
   }
   

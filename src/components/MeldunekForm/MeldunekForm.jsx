@@ -10,64 +10,64 @@ import { useTranslation } from "react-i18next";
 
 const polishRegex = /^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$/;
 
-const MeldunekSchema = Yup.object().shape({
-  nazwisko: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters / Лише польські літери")
-    .min(2, "Za krótkie / Too short / Забагато коротке")
-    .max(50, "Za długie / Too long / Забагато довге")
-    .required("Wymagane / Required / Обов'язково"),
-  imie: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters / Лише польські літери")
-    .min(2, "Za krótkie / Too short / Забагато коротке")
-    .max(50, "Za długie / Too long / Забагато довге")
-    .required("Wymagane / Required / Обов'язково"),
-  pesel: Yup.string()
-    .matches(/^[0-9]+$/, "Tylko cyfry / Only digits / Лише цифри")
-    .length(11, "PESEL musi mieć 11 cyfr / PESEL must have 11 digits / PESEL має містити 11 цифр")
-    .required("Wymagane / Required / Обов'язково"),
-  krajUrodzenia: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters / Лише польські літери")
-    .required("Wymagane / Required / Обов'язково"),
-  dataUrodzenia: Yup.date().required("Wymagane / Required / Обов'язково"),
-  miejsceUrodzenia: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters / Лише польські літери")
-    .required("Wymagane / Required / Обов'язково"),
-  krajMiejscaZamieszkania: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters / Лише польські літери")
-    .required("Wymagane / Required / Обов'язково"),
-  telefon: Yup.string()
-    .matches(/^[0-9]+$/, "Tylko cyfry / Only digits / Лише цифри")
-    .min(9, "Za krótki / Too short / Забагато короткий")
-    .required("Wymagane / Required / Обов'язково"),
-  email: Yup.string()
-    .email("Niepoprawny email / Invalid email / Невірний email")
-    .required("Wymagane / Required / Обов'язково"),
-  ulica: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters / Лише польські літери")
-    .required("Wymagane / Required / Обов'язково"),
-  numerDomu: Yup.string()
-    .matches(/^[0-9]+$/, "Tylko cyfry / Only digits / Лише цифри")
-    .required("Wymagane / Required / Обов'язково"),
-  numerLokalu: Yup.string().matches(/^[0-9]*$/, "Tylko cyfry / Only digits / Лише цифри"),
-  kodPocztowy: Yup.string()
-    .matches(/^[0-9]{2}-[0-9]{3}$/, "Format: 00-000 / Format: 00-000 / Формат: 00-000")
-    .required("Wymagane / Required / Обов'язково"),
-  miejscowoscDzielnica: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters / Лише польські літери")
-    .required("Wymagane / Required / Обов'язково"),
-  gmina: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters / Лише польські літери")
-    .required("Wymagane / Required / Обов'язково"),
-  wojewodztwo: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters / Лише польські літери")
-    .required("Wymagane / Required / Обов'язково"),
-  dataPoczatkowa: Yup.date().required("Wymagane / Required / Обов'язково"),
-  dataKoncowa: Yup.date().required("Wymagane / Required / Обов'язково"),
-});
-
 
 export default function MeldunekForm() {
   const {t} = useTranslation('meldunekForm')
+
+const MeldunekSchema = Yup.object().shape({
+  nazwisko: Yup.string()
+    .matches(polishRegex, t('meldunekSchema.polishRegex'))
+    .min(1, t('meldunekSchema.min'))
+    .max(50, t('meldunekSchema.max'))
+    .required(t('meldunekSchema.required')),
+  imie: Yup.string()
+  .matches(polishRegex, t('meldunekSchema.polishRegex'))
+  .min(1, t('meldunekSchema.min'))
+  .max(50, t('meldunekSchema.max'))
+  .required(t('meldunekSchema.required')),
+  pesel: Yup.string()
+    .matches(/^[0-9]+$/, t('meldunekSchema.matches'))
+    .length(11, t('meldunekSchema.pesel'))
+    .required(t('meldunekSchema.required')),
+  krajUrodzenia: Yup.string()
+    .matches(polishRegex, t('meldunekSchema.polishRegex'))
+    .required(t('meldunekSchema.required')),
+  dataUrodzenia: Yup.date().max(new Date(),t('meldunekSchema.dataUrodzenia')).required(t('meldunekSchema.required')),
+  miejsceUrodzenia: Yup.string()
+  .matches(polishRegex, t('meldunekSchema.polishRegex'))
+  .required(t('meldunekSchema.required')),
+  krajMiejscaZamieszkania: Yup.string()
+  .matches(polishRegex, t('meldunekSchema.polishRegex'))
+  .required(t('meldunekSchema.required')),
+  telefon: Yup.string()
+    .matches(/^[0-9]+$/, t('meldunekSchema.matches'))
+    .min(9, t('meldunekSchema.min'))
+    .required(t('meldunekSchema.required')),
+  email: Yup.string()
+    .email(t('meldunekSchema.email'))
+    .required(t('meldunekSchema.required')),
+  ulica: Yup.string()
+    .matches(polishRegex, t('meldunekSchema.polishRegex'))
+    .required(t('meldunekSchema.required')),
+  numerDomu: Yup.string()
+    .matches(/^[0-9]+$/, t('meldunekSchema.matches'))
+    .required(t('meldunekSchema.required')),
+  numerLokalu: Yup.string(),
+  kodPocztowy: Yup.string()
+    .matches(/^[0-9]{2}-[0-9]{3}$/, t('meldunekSchema.kodPocztowy'))
+    .required(t('meldunekSchema.required')),
+  miejscowoscDzielnica: Yup.string()
+    .matches(polishRegex, t('meldunekSchema.polishRegex'))
+    .required(t('meldunekSchema.required')),
+  gmina: Yup.string()
+    .matches(polishRegex, t('meldunekSchema.polishRegex'))
+    .required(t('meldunekSchema.required')),
+  wojewodztwo: Yup.string()
+    .matches(polishRegex, t('meldunekSchema.polishRegex'))
+    .required(t('meldunekSchema.required')),
+  dataPoczatkowa: Yup.date().required(t('meldunekSchema.required')),
+  dataKoncowa: Yup.date().required(t('meldunekSchema.required')),
+});
   const fields = [
     { name: "nazwisko", label: t('labels.nazwisko'), placeholder: "Kowalski", autoComplete: "family-name" },
     { name: "imie", label: t('labels.imie'), placeholder: "Jan", autoComplete: "given-name" },

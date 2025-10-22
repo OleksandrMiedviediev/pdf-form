@@ -91,6 +91,17 @@
     "buttons": {
       "submit": "Generate PDF",
       "reset": "Clear form"
-    }
+    },
+    "peselSchema":{
+      "polishRegex":"Only Polish letters",
+      "min":"Too short",
+      "max":"Too long",
+      "required":"Required",
+      "matches":"Only digits",
+      "email":"Invalid email",
+      "kodPocztowy":"Format: 00-000",
+      "pesel":"PESEL must have 11 digits",
+      "dataUrodzenia":"Date cannot be in the future"
+  }
   }
   

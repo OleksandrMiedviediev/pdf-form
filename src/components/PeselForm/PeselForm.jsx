@@ -11,87 +11,7 @@ import { useTranslation } from "react-i18next";
 // ✅ Валидатор польских букв
 const polishRegex = /^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ\s-]+$/;
 
-// ✅ Схема валидации Yup
-const PeselSchema = Yup.object().shape({
-  imie: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  nazwisko: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  ulica: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  numerDomu: Yup.string().required("Wymagane / Required / Обов’язково"),
-  numerLokalu: Yup.string(),
-  kodPocztowy: Yup.string()
-    .matches(/^[0-9]{2}-[0-9]{3}$/, "Format: 00-000 / Format: 00-000 / Формат: 00-000"),
-  miejscowosc: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  imiePierwszeKtorejDotyczyWniosek: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  imieDrugieKtorejDotyczyWniosek: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери"),
-  imieKolejneKtorejDotyczyWniosek: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери"),
-  nazwiskoKtorejDotyczyWniosek: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  plec: Yup.string().required("Wymagane / Required / Обов’язково"),
-  dataUrodzenia: Yup.date().required("Wymagane / Required / Обов’язково"),
-  krajUrodzenia: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  krajMiejscaZamieszkania: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  obywatelstwo: Yup.string().required("Wymagane / Required / Обов’язково"),
-  obywatelstwoInne: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери"),
-  numerPaszportu: Yup.string(),
-  dataWaznosciPaszportu: Yup.date(),
-  numerPodrozy: Yup.string().required("Wymagane / Required / Обов’язково"),
-  dataWaznosciPodrozy: Yup.date().required("Wymagane / Required / Обов’язково"),
-  nazwiskoRodowe: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  miejsceUrodzenia: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  oznaczenieAktuUrodzenia: Yup.string().required("Wymagane / Required / Обов’язково"),
-  oznaczenieUrzeduAktUrodzenia: Yup.string().required("Wymagane / Required / Обов’язково"),
-  imieOjca: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  nazwiskoRodoweOjca: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  imieMatki: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  nazwiskoRodoweMatki: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери")
-    .required("Wymagane / Required / Обов’язково"),
-  numerDowodu: Yup.string(),
-  dataWaznosciDowodu: Yup.date(),
-  oznaczenieOrganuKtoryWydalDowod: Yup.string(),
-  stanCywilny: Yup.string().required("Wymagane / Required / Обов’язково"),
-  imieMalzonka: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери"),
-  nazwiskoRodoweMalzonka: Yup.string()
-    .matches(polishRegex, "Dozwolone tylko polskie litery / Only Polish letters allowed / Дозволено лише польські літери"),
-  numerPeselMalzonka: Yup.string()
-    .matches(/^[0-9]+$/, "Tylko cyfry / Only digits / Лише цифри")
-    .length(11, "PESEL musi mieć 11 cyfr / PESEL must have 11 digits / PESEL має містити 11 цифр"),
-  zdazenie: Yup.string(),
-  dataZdazenia: Yup.date(),
-  oznaczenieAktuMalzenstwa: Yup.string(),
-  oznaczenieUrzeduStanuCywilnego: Yup.string(),
-  version: Yup.string().required("Wymagane / Required / Обов’язково"),
-  adresElektroniczny: Yup.string().email("Niepoprawny email / Invalid email / Невірний email"),
-});
+
 
 
 // ✅ Стандартные значения
@@ -143,7 +63,87 @@ const defaultValues = {
 export default function PeselForm() {
 
   const {t} = useTranslation('peselForm')
-
+// ✅ Схема валидации Yup
+const PeselSchema = Yup.object().shape({
+  imie: Yup.string()
+    .matches(polishRegex, t('peselSchema.polishRegex'))
+    .required(t('peselSchema.required')),
+  nazwisko: Yup.string()
+  .matches(polishRegex, t('peselSchema.polishRegex'))
+  .required(t('peselSchema.required')),
+  ulica: Yup.string()
+  .matches(polishRegex, t('peselSchema.polishRegex'))
+  .required(t('peselSchema.required')),
+  numerDomu: Yup.string().required(t('peselSchema.required')),
+  numerLokalu: Yup.string(),
+  kodPocztowy: Yup.string()
+    .matches(/^[0-9]{2}-[0-9]{3}$/, t('peselSchema.kodPocztowy')),
+  miejscowosc: Yup.string()
+  .matches(polishRegex, t('peselSchema.polishRegex'))
+  .required(t('peselSchema.required')),
+  imiePierwszeKtorejDotyczyWniosek: Yup.string()
+  .matches(polishRegex, t('peselSchema.polishRegex'))
+  .required(t('peselSchema.required')),
+  imieDrugieKtorejDotyczyWniosek: Yup.string()
+    .matches(polishRegex, t('peselSchema.polishRegex')),
+  imieKolejneKtorejDotyczyWniosek: Yup.string()
+    .matches(polishRegex, t('peselSchema.polishRegex')),
+  nazwiskoKtorejDotyczyWniosek: Yup.string()
+    .matches(polishRegex, t('peselSchema.polishRegex'))
+    .required(t('peselSchema.required')),
+  plec: Yup.string().required(t('peselSchema.required')),
+  dataUrodzenia: Yup.date().max(new Date(), t('peselSchema.dataUrodzenia')).required(t('peselSchema.required')),
+  krajUrodzenia: Yup.string()
+  .matches(polishRegex, t('peselSchema.polishRegex'))
+  .required(t('peselSchema.required')),
+  krajMiejscaZamieszkania: Yup.string()
+  .matches(polishRegex, t('peselSchema.polishRegex'))
+  .required(t('peselSchema.required')),
+  obywatelstwo: Yup.string().required(t('peselSchema.required')),
+  obywatelstwoInne: Yup.string()
+    .matches(polishRegex, t('peselSchema.polishRegex')),
+  numerPaszportu: Yup.string(),
+  dataWaznosciPaszportu: Yup.date(),
+  numerPodrozy: Yup.string(),
+  dataWaznosciPodrozy: Yup.date(),
+  nazwiskoRodowe: Yup.string()
+    .matches(polishRegex, t('peselSchema.polishRegex'))
+    .required(t('peselSchema.required')),
+  miejsceUrodzenia: Yup.string()
+  .matches(polishRegex, t('peselSchema.polishRegex'))
+  .required(t('peselSchema.required')),
+  oznaczenieAktuUrodzenia: Yup.string().required(t('peselSchema.required')),
+  oznaczenieUrzeduAktUrodzenia: Yup.string().required(t('peselSchema.required')),
+  imieOjca: Yup.string()
+  .matches(polishRegex, t('peselSchema.polishRegex'))
+  .required(t('peselSchema.required')),
+  nazwiskoRodoweOjca: Yup.string()
+  .matches(polishRegex, t('peselSchema.polishRegex'))
+  .required(t('peselSchema.required')),
+  imieMatki: Yup.string()
+  .matches(polishRegex, t('peselSchema.polishRegex'))
+  .required(t('peselSchema.required')),
+  nazwiskoRodoweMatki: Yup.string()
+  .matches(polishRegex, t('peselSchema.polishRegex'))
+  .required(t('peselSchema.required')),
+  numerDowodu: Yup.string(),
+  dataWaznosciDowodu: Yup.date(),
+  oznaczenieOrganuKtoryWydalDowod: Yup.string(),
+  stanCywilny: Yup.string().required(t('peselSchema.required')),
+  imieMalzonka: Yup.string()
+    .matches(polishRegex, t('peselSchema.polishRegex')),
+  nazwiskoRodoweMalzonka: Yup.string()
+    .matches(polishRegex, t('peselSchema.polishRegex')),
+  numerPeselMalzonka: Yup.string()
+    .matches(/^[0-9]+$/, t('peselSchema.matches'))
+    .length(11, t('peselSchema.pesel')),
+  zdazenie: Yup.string(),
+  dataZdazenia: Yup.date(),
+  oznaczenieAktuMalzenstwa: Yup.string(),
+  oznaczenieUrzeduStanuCywilnego: Yup.string(),
+  version: Yup.string().required(t('peselSchema.required')),
+  adresElektroniczny: Yup.string().email(t('peselSchema.email')),
+});
   // ✅ Подгружаем сохранённые данные
   const [savedValues, setSavedValues] = useState(() => {
     const saved = localStorage.getItem("peselFormData");
