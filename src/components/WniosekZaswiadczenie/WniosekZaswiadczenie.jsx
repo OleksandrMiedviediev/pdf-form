@@ -52,8 +52,7 @@ const validationSchema = Yup.object().shape({
   miastoZamieszkania: Yup.string().matches(polishRegex, t('zaswiadczenieSchema.polishRegex'))
   .required(t('zaswiadczenieSchema.required')),
   reprezentowanyPrzez1: Yup.string()
-  .matches(polishRegex, t('zaswiadczenieSchema.polishRegex'))
-  .required(t('zaswiadczenieSchema.required')),
+  .matches(polishRegex, t('zaswiadczenieSchema.polishRegex')),
   reprezentowanyPrzez2: Yup.string().matches(polishRegex, t('zaswiadczenieSchema.polishRegex')),
   kodPocztowy: Yup.string()
   .matches(/^[0-9]{2}-[0-9]{3}$/, t('zaswiadczenieSchema.kodPocztowy'))
