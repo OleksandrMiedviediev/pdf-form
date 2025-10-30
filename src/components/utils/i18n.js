@@ -33,6 +33,10 @@ import wniosekUmozenieKPPL from "../../locales/pl/wniosekUmozenieKP.json";
 import wniosekUmozenieKPEN from "../../locales/en/wniosekUmozenieKP.json";
 import wniosekUmozenieKPUA from "../../locales/ua/wniosekUmozenieKP.json";
 
+import wniosekZaswiadczeniePL from "../../locales/pl/wniosekZaswiadczenie.json";
+import wniosekZaswiadczenieEN from "../../locales/en/wniosekZaswiadczenie.json";
+import wniosekZaswiadczenieUA from "../../locales/ua/wniosekZaswiadczenie.json";
+
 
 i18n
   .use(initReactI18next)
@@ -48,6 +52,7 @@ i18n
             buttonsGroup: buttonsGroupPL,
             meldunekForm: meldunekFormPL,
             wniosekUmozenieKP: wniosekUmozenieKPPL,
+            wniosekZaswiadczenie: wniosekZaswiadczeniePL,
         },
       en: 
         { 
@@ -59,6 +64,7 @@ i18n
             buttonsGroup: buttonsGroupEN,
             meldunekForm: meldunekFormEN,
             wniosekUmozenieKP: wniosekUmozenieKPEN,
+            wniosekZaswiadczenie: wniosekZaswiadczenieEN,
         },
       ua: 
         { homePage: homePageUA, 
@@ -69,6 +75,7 @@ i18n
             buttonsGroup: buttonsGroupUA,
             meldunekForm: meldunekFormUA,
             wniosekUmozenieKP: wniosekUmozenieKPUA,
+            wniosekZaswiadczenie: wniosekZaswiadczenieUA,
         },
     },
     lng: localStorage.getItem("appLanguage") || 'en',

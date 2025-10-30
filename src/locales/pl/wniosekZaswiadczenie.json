@@ -1,0 +1,43 @@
+{
+  "title": "Wniosek o wydanie zaświadczenia z numerem sprawy",
+  "sections": {
+    "applicant": "Dane wnioskodawcy",
+    "office": "Dane urzędu",
+    "subject": "Przedmiot udzielenia",
+    "address": "Adres do korespondencji",
+    "additional": "Dane osoby, której dotyczy wniosek"
+  },
+  "labels": {
+    "miejscowosc": "Miejscowość składania wniosku",
+    "data": "Data wypełnienia",
+    "imieNazwisko": "Imię i nazwisko",
+    "kodPocztowy": "Kod pocztowy",
+    "ulicaNumerMieszkania1": "Ulica i numer mieszkania",
+    "ulicaNumerMieszkania2": "Ulica i numer mieszkania",
+    "miastoZamieszkania": "Miejscowość",
+    "reprezentowanyPrzez1": "Imię i nazwisko pełnomocnika",
+    "reprezentowanyPrzez2": "Dane kontaktowe pełnomocnika",
+    "imieNazwiskoWnioskodawcy": "Imię i nazwisko wnioskodawcy",
+    "numerPaszportu": "Seria i numer paszportu",
+    "ulica": "Ulica",
+    "numerUlicy": "Numer domu i mieszkania",
+    "miasto": "Miejscowość"
+  },
+  "options": {
+    "default": "--- wybierz ---",
+    "czasowy": "Zezwolenie na pobyt czasowy",
+    "staly": "Pobyt stały",
+    "ue": "Pobyt rezydenta długoterminowego UE"
+  },
+  "zaswiadczenieSchema": {
+    "polishRegex": "Dozwolone tylko polskie litery",
+    "min": "Za krótkie",
+    "max": "Za długie",
+    "required": "Wymagane",
+    "matches": "Tylko cyfry",
+    "email": "Niepoprawny email",
+    "kodPocztowy": "Format: 00-000",
+    "pesel": "PESEL musi mieć 11 cyfr",
+    "dataUrodzenia": "Data nie może być w przyszłości"
+  }
+}

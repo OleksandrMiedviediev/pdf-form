@@ -9,6 +9,7 @@ const MeldunekPage = lazy (()=> import('../MeldunekForm/MeldunekForm.jsx'))
 const PeselPage = lazy (()=> import('../PeselForm/PeselForm.jsx'))
 const DocumentsPage1 = lazy (()=> import('../../pages/DocumentsPage/DokumentsPage.jsx'))
 const WniosekUmorzenieKP = lazy (()=> import('../../components/WniosekUmozenieKP/WniosekUmozenieKP.jsx'))
+const WniosekZaswiadczenie = lazy (()=> import('../../components/WniosekZaswiadczenie/WniosekZaswiadczenie.jsx'))
 
 export default function App() {
 
@@ -20,6 +21,7 @@ export default function App() {
         <Route path='/pesel' element = {<PeselPage />} />
         <Route path='/documents' element = {<DocumentsPage1 />} />
         <Route path='/umozenie' element = {<WniosekUmorzenieKP />} />
+        <Route path='/zaswiadczenie' element = {<WniosekZaswiadczenie />} />
         <Route path='*' element = {<NotFoundPage />} />
       </Routes>
     </Layout>

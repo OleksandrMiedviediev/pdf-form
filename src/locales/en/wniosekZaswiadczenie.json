@@ -1,0 +1,43 @@
+{
+  "title": "Application for issuance of a certificate with a case number",
+  "sections": {
+    "applicant": "Applicant’s details",
+    "office": "Office information",
+    "subject": "Subject of issuance",
+    "address": "Correspondence address",
+    "additional": "Details of the person concerned"
+  },
+  "labels": {
+    "miejscowosc": "Place of application submission",
+    "data": "Date of completion",
+    "imieNazwisko": "Full name",
+    "kodPocztowy": "Postal code",
+    "ulicaNumerMieszkania1": "Street and apartment number",
+    "ulicaNumerMieszkania2": "Street and apartment number",
+    "miastoZamieszkania": "City/Town",
+    "reprezentowanyPrzez1": "Representative’s full name",
+    "reprezentowanyPrzez2": "Representative’s contact details",
+    "imieNazwiskoWnioskodawcy": "Applicant’s full name",
+    "numerPaszportu": "Passport series and number",
+    "ulica": "Street",
+    "numerUlicy": "House and apartment number",
+    "miasto": "City/Town"
+  },
+  "options": {
+    "default": "--- select ---",
+    "czasowy": "Temporary residence permit",
+    "staly": "Permanent residence",
+    "ue": "Long-term EU resident permit"
+  },
+  "zaswiadczenieSchema": {
+    "polishRegex": "Only Polish letters allowed",
+    "min": "Too short",
+    "max": "Too long",
+    "required": "Required",
+    "matches": "Digits only",
+    "email": "Invalid email",
+    "kodPocztowy": "Format: 00-000",
+    "pesel": "PESEL must contain 11 digits",
+    "dataUrodzenia": "Date cannot be in the future"
+  }
+}
