@@ -1,0 +1,11 @@
+export { default as homePage } from "./homePage.json";
+export { default as navigation } from "./navigation.json";
+export { default as documentsPage } from "./documentsPage.json";
+export { default as infoMeldunek } from "./infoMeldunek.json";
+export { default as peselForm } from "./peselForm.json";
+export { default as buttonsGroup } from "./buttonsGroup.json";
+export { default as meldunekForm } from "./meldunekForm.json";
+export { default as wniosekUmozenieKP } from "./wniosekUmozenieKP.json";
+export { default as wniosekZaswiadczenie } from "./wniosekZaswiadczenie.json";
+export { default as wniosekZwrotOplatySkarbowej } from "./wniosekZwrotOplatySkarbowej.json";
+export { default as wniosekZwrotOplatyKP } from "./wniosekZwrotOplatyKP.json";
