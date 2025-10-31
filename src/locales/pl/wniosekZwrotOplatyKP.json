@@ -1,0 +1,49 @@
+{
+  "title": "Wniosek o zwrot opłaty za kartę pobytu",
+  "sections": {
+    "applicant": "Dane wnioskodawcy",
+    "office": "Dane urzędu",
+    "subject": "Przedmiot udzielenia",
+    "address": "Adres do korespondencji",
+    "kwota": "Kwota",
+    "formaZwrotu": "Forma Zwrotu"
+  },
+  "labels": {
+    "imieNazwisko": "Imię i nazwisko",
+    "dataUrodzenia": "Data urodzenia",
+    "obywatelstwo": "Obywatelstwo",
+    "nrSprawy": "Numer sprawy",
+    "miejscowoscUrzedu": "Miejscowość urzędu",
+    "dataWypelnienia": "Data wypełnienia",
+    "przedmiotUdzielenia": "Przedmiot udzielenia",
+    "ulica": "Ulica i numer domu / lokalu",
+    "kodPocztowy": "Kod pocztowy",
+    "miejscowoscWnioskodawcy": "Miejscowość",
+    "dataZaplaty": "Kwota wniesiona w dniu:",
+    "uzasadnienie": "Uzasadnienie",
+    "nrKonta": "Numer Konta",
+    "imieNazwisko2": "Imię i nazwisko",
+    "dokladnyAdress": "Dokładny adres"
+  },
+  "options": {
+    "default": "--- wybierz ---",
+    "czasowy": "Zezwolenie na pobyt czasowy",
+    "staly": "Pobyt stały",
+    "ue": "Pobyt rezydenta długoterminowego UE",
+    "100": "100 zł.",
+    "50": "50 zł.",
+    "naRachunekBankowy": "Na rachunek bankowy",
+    "naAdres": "Na address (zwrot pomniejszony o koszt przekazu pocztowego)"
+  },
+  "schema":{
+      "polishRegex":"Dozwolone tylko polskie litery",
+      "min":"Za krótkie",
+      "max":"Za długie",
+      "required":"Wymagane",
+      "matches":"Tylko cyfry",
+      "email":"Niepoprawny email",
+      "kodPocztowy":"Format: 00-000",
+      "pesel":"PESEL musi mieć 11 cyfr",
+      "dataUrodzenia":"Data nie może być w przyszłości"
+  }
+}

@@ -1,0 +1,141 @@
+.formWrapper {
+    background: #f9fafb;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-family: "Inter", system-ui, sans-serif;
+  }
+  
+  .title {
+    font-size: 26px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #1f2937;
+  }
+  
+  .sectionTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #003366;
+    border-bottom: 2px solid #d1d5db;
+    padding-bottom: 4px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  
+  
+  .single {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .input,
+  .select {
+    width: 100%;
+    padding: 10px 14px;
+    display: flex;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-top: 4px;
+    transition: all 0.2s;
+    background: white;
+  }
+  
+  .input:focus,
+  .select:focus {
+    border-color: #2563eb;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 40px;
+  }
+  
+  .buttons button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease;
+    transform: translateY(0);
+  }
+  
+  /* Эффект при наведении */
+  .buttons button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+  }
+  
+  /* Кнопка "очистить" */
+  .buttons button[type="button"] {
+    background: #dc3545;
+  }
+  
+  .buttons button[type="button"]:hover {
+    background: #b02a37;
+    transform: translateY(-2px);
+  }
+  
+  /* Небольшая тень для визуального "подъема" */
+  .buttons button:active {
+    transform: translateY(0);
+  }
+  /* 🔸 Ошибки */
+.error {
+  color: #d9534f;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.fieldWrapper {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding-right: 2.5rem; /* оставляем место для кнопки */
+  box-sizing: border-box;
+}
+
+.clearBtn {
+  position: absolute;
+  right: 0.5rem;  /* отступ от правого края */
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.clearBtn:hover {
+  color: #ff4d4d;
+}

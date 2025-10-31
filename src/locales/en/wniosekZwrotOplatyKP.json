@@ -1,0 +1,49 @@
+{
+  "title": "Application for refund of residence card fee",
+  "sections": {
+    "applicant": "Applicant’s data",
+    "office": "Office details",
+    "subject": "Subject of application",
+    "address": "Correspondence address",
+    "kwota": "Amount",
+    "formaZwrotu": "Refund method"
+  },
+  "labels": {
+    "imieNazwisko": "First and last name",
+    "dataUrodzenia": "Date of birth",
+    "obywatelstwo": "Citizenship",
+    "nrSprawy": "Case number",
+    "miejscowoscUrzedu": "Office city",
+    "dataWypelnienia": "Date of completion",
+    "przedmiotUdzielenia": "Subject of application",
+    "ulica": "Street and house / apartment number",
+    "kodPocztowy": "Postal code",
+    "miejscowoscWnioskodawcy": "City of residence",
+    "dataZaplaty": "Amount paid on:",
+    "uzasadnienie": "Justification",
+    "nrKonta": "Bank account number",
+    "imieNazwisko2": "First and last name",
+    "dokladnyAdress": "Exact address"
+  },
+  "options": {
+    "default": "--- select ---",
+    "czasowy": "Temporary residence permit",
+    "staly": "Permanent residence",
+    "ue": "EU long-term resident permit",
+    "100": "100 PLN",
+    "50": "50 PLN",
+    "naRachunekBankowy": "To a bank account",
+    "naAdres": "To an address (refund reduced by postal fee)"
+  },
+  "schema": {
+    "polishRegex": "Only Polish letters allowed",
+    "min": "Too short",
+    "max": "Too long",
+    "required": "Required",
+    "matches": "Digits only",
+    "email": "Invalid email",
+    "kodPocztowy": "Format: 00-000",
+    "pesel": "PESEL must contain 11 digits",
+    "dataUrodzenia": "Date cannot be in the future"
+  }
+}

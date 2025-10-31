@@ -6,5 +6,7 @@
     "btnPesel":"PESEL",
     "homeSectionKP":"Wnioski związane z kartą pobytu i rezydentem UE",
     "btnUmorzenie":"Umorzenie",
-    "btnZaswiadczenie":"Wniosek o wydanie zaświadczenia z numerem sprawy"
+    "btnZaswiadczenie":"Wniosek o wydanie zaświadczenia z numerem sprawy",
+    "btnZwrotOplatySkarbowej": "Wniosek o zwrot opłaty skarbowej za zezwolenie na pobyt",
+    "btnZwrotOplatySkarbowejKP": "Wniosek o zwrot opłaty za kartę pobytu"
 }

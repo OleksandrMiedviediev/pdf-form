@@ -37,6 +37,14 @@ import wniosekZaswiadczeniePL from "../../locales/pl/wniosekZaswiadczenie.json";
 import wniosekZaswiadczenieEN from "../../locales/en/wniosekZaswiadczenie.json";
 import wniosekZaswiadczenieUA from "../../locales/ua/wniosekZaswiadczenie.json";
 
+import wniosekZwrotOplatySkarbowejPL from "../../locales/pl/wniosekZwrotOplatySkarbowej.json";
+import wniosekZwrotOplatySkarbowejEN from "../../locales/en/wniosekZwrotOplatySkarbowej.json";
+import wniosekZwrotOplatySkarbowejUA from "../../locales/ua/wniosekZwrotOplatySkarbowej.json";
+
+import wniosekZwrotOplatyKPPL from "../../locales/pl/wniosekZwrotOplatyKP.json";
+import wniosekZwrotOplatyKPEN from "../../locales/en/wniosekZwrotOplatyKP.json";
+import wniosekZwrotOplatyKPUA from "../../locales/ua/wniosekZwrotOplatyKP.json";
+
 
 i18n
   .use(initReactI18next)
@@ -53,6 +61,8 @@ i18n
             meldunekForm: meldunekFormPL,
             wniosekUmozenieKP: wniosekUmozenieKPPL,
             wniosekZaswiadczenie: wniosekZaswiadczeniePL,
+            wniosekZwrotOplatySkarbowej: wniosekZwrotOplatySkarbowejPL,
+            wniosekZwrotOplatyKP: wniosekZwrotOplatyKPPL,
         },
       en: 
         { 
@@ -65,6 +75,8 @@ i18n
             meldunekForm: meldunekFormEN,
             wniosekUmozenieKP: wniosekUmozenieKPEN,
             wniosekZaswiadczenie: wniosekZaswiadczenieEN,
+            wniosekZwrotOplatySkarbowej: wniosekZwrotOplatySkarbowejEN,
+            wniosekZwrotOplatyKP: wniosekZwrotOplatyKPEN,
         },
       ua: 
         { homePage: homePageUA, 
@@ -76,6 +88,8 @@ i18n
             meldunekForm: meldunekFormUA,
             wniosekUmozenieKP: wniosekUmozenieKPUA,
             wniosekZaswiadczenie: wniosekZaswiadczenieUA,
+            wniosekZwrotOplatySkarbowej: wniosekZwrotOplatySkarbowejUA,
+            wniosekZwrotOplatyKP: wniosekZwrotOplatyKPUA,
         },
     },
     lng: localStorage.getItem("appLanguage") || 'en',
