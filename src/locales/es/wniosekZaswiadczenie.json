@@ -1,0 +1,43 @@
+{
+  "title": "Solicitud de certificado con número de expediente",
+  "sections": {
+    "applicant": "Datos del solicitante",
+    "office": "Datos de la oficina",
+    "subject": "Asunto de la solicitud",
+    "address": "Dirección de correspondencia",
+    "additional": "Datos de la persona a la que se refiere la solicitud"
+  },
+  "labels": {
+    "miejscowosc": "Localidad de presentación de la solicitud",
+    "data": "Fecha de llenado",
+    "imieNazwisko": "Nombre y apellido",
+    "kodPocztowy": "Código postal",
+    "ulicaNumerMieszkania1": "Calle y número de vivienda",
+    "ulicaNumerMieszkania2": "Calle y número de vivienda",
+    "miastoZamieszkania": "Localidad",
+    "reprezentowanyPrzez1": "Nombre y apellido del apoderado",
+    "reprezentowanyPrzez2": "Datos de contacto del apoderado",
+    "imieNazwiskoWnioskodawcy": "Nombre y apellido del solicitante",
+    "numerPaszportu": "Serie y número del pasaporte",
+    "ulica": "Calle",
+    "numerUlicy": "Número de casa y vivienda",
+    "miasto": "Localidad"
+  },
+  "options": {
+    "default": "--- seleccionar ---",
+    "czasowy": "Permiso de residencia temporal",
+    "staly": "Residencia permanente",
+    "ue": "Residencia de largo plazo en la UE"
+  },
+  "zaswiadczenieSchema": {
+    "polishRegex": "Solo se permiten letras polacas",
+    "min": "Demasiado corto",
+    "max": "Demasiado largo",
+    "required": "Obligatorio",
+    "matches": "Solo números",
+    "email": "Correo electrónico inválido",
+    "kodPocztowy": "Formato: 00-000",
+    "pesel": "El PESEL debe tener 11 dígitos",
+    "dataUrodzenia": "La fecha no puede ser futura"
+  }
+}

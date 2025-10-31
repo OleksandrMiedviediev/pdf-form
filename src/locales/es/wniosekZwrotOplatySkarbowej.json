@@ -1,0 +1,50 @@
+{
+  "title": "Solicitud de reembolso de la tasa administrativa por permiso de residencia",
+  "sections": {
+    "applicant": "Datos del solicitante",
+    "office": "Datos de la oficina",
+    "subject": "Asunto de la solicitud",
+    "address": "Dirección de correspondencia",
+    "kwota": "Cantidad",
+    "formaZwrotu": "Forma de reembolso"
+  },
+  "labels": {
+    "imieNazwisko": "Nombre y apellido",
+    "dataUrodzenia": "Fecha de nacimiento",
+    "obywatelstwo": "Ciudadanía",
+    "nrSprawy": "Número de expediente",
+    "miejscowoscUrzedu": "Localidad de la oficina",
+    "dataWypelnienia": "Fecha de llenado",
+    "przedmiotUdzielenia": "Asunto de la solicitud",
+    "ulica": "Calle y número de casa / apartamento",
+    "kodPocztowy": "Código postal",
+    "miejscowoscWnioskodawcy": "Localidad",
+    "dataZaplaty": "Cantidad pagada en la fecha:",
+    "uzasadnienie": "Justificación",
+    "nrKonta": "Número de cuenta",
+    "imieNazwisko2": "Nombre y apellido",
+    "dokladnyAdress": "Dirección completa"
+  },
+  "options": {
+    "default": "--- seleccionar ---",
+    "czasowy": "Permiso de residencia temporal",
+    "staly": "Residencia permanente",
+    "ue": "Residencia de largo plazo en la UE",
+    "340": "340 zł.",
+    "440": "440 zł.",
+    "640": "640 zł.",
+    "naRachunekBankowy": "A cuenta bancaria",
+    "naAdres": "A dirección (reembolso reducido por el costo de envío postal)"
+  },
+  "schema": {
+    "polishRegex": "Solo se permiten letras polacas",
+    "min": "Demasiado corto",
+    "max": "Demasiado largo",
+    "required": "Obligatorio",
+    "matches": "Solo números",
+    "email": "Correo electrónico inválido",
+    "kodPocztowy": "Formato: 00-000",
+    "pesel": "El PESEL debe tener 11 dígitos",
+    "dataUrodzenia": "La fecha no puede ser futura"
+  }
+}

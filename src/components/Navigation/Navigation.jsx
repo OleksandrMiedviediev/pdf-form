@@ -32,6 +32,7 @@ export default function Navigation() {
                     <option value="pl">🇵🇱 PL</option>
                     <option value="en">🇬🇧 EN</option>
                     <option value="ua">🇺🇦 UA</option>
+                    <option value="es">🇪🇸 ES</option>
                 </select>
             </div>
         </nav>

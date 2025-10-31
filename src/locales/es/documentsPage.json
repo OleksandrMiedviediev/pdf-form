@@ -1,0 +1,12 @@
+{
+    "homeTitle": "Documents Portal",
+    "homeSubtitle": "Tu guía sobre los trámites en Polonia",
+    "homeSectionPesel": "Solicitud para la asignación del número PESEL y registro de residencia",
+    "btnMeldunek": "Registro de residencia",
+    "btnPesel": "PESEL",
+    "homeSectionKP": "Solicitudes relacionadas con la tarjeta de residencia y el residente de la UE",
+    "btnUmorzenie": "Anulación",
+    "btnZaswiadczenie": "Solicitud de certificado con número de expediente",
+    "btnZwrotOplatySkarbowej": "Solicitud de reembolso de la tasa administrativa por permiso de residencia",
+    "btnZwrotOplatySkarbowejKP": "Solicitud de reembolso de la tasa por tarjeta de residencia"
+}

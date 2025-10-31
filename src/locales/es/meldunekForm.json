@@ -1,0 +1,35 @@
+{
+    "title": "Registro de residencia temporal",
+    "description": "Si resides en Polonia, regístrate para residencia permanente o temporal (más de 3 meses). No necesitas registrarte si sabes que tu estancia en Polonia no será superior a 30 días, por ejemplo, si estás de vacaciones.",
+    "labels": {
+        "nazwisko": "Apellido",
+        "imie": "Nombre",
+        "pesel": "PESEL",
+        "krajUrodzenia": "País de nacimiento",
+        "dataUrodzenia": "Fecha de nacimiento",
+        "miejsceUrodzenia": "Lugar de nacimiento",
+        "krajMiejscaZamieszkania": "País de residencia",
+        "telefon": "Teléfono",
+        "email": "Correo electrónico",
+        "ulica": "Calle",
+        "numerDomu": "Número de casa",
+        "numerLokalu": "Número de apartamento",
+        "kodPocztowy": "Código postal",
+        "miejscowoscDzielnica": "Localidad",
+        "gmina": "Municipio",
+        "wojewodztwo": "Voivodato",
+        "dataPoczatkowa": "Fecha inicial",
+        "dataKoncowa": "Fecha final"
+    },
+    "meldunekSchema":{
+        "polishRegex":"Solo se permiten letras polacas",
+        "min":"Demasiado corto",
+        "max":"Demasiado largo",
+        "required":"Requerido",
+        "matches":"Solo números",
+        "email":"Correo electrónico no válido",
+        "kodPocztowy":"Formato: 00-000",
+        "pesel":"PESEL debe tener 11 dígitos",
+        "dataUrodzenia":"La fecha no puede estar en el futuro"
+    }
+}

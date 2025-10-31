@@ -1,0 +1,107 @@
+{
+  "title": "🧾 Solicitud para obtener número PESEL",
+  "applicantSection": "Solicitante",
+  "addressSection": "Dirección de correspondencia de la persona que presenta la solicitud",
+  "personSection": "Datos de la persona a la que se refiere la solicitud",
+  "citizenshipSection": "Ciudadanía",
+  "additionalSection": "Datos adicionales de la persona a la que se refiere la solicitud y de sus padres",
+  "maritalStatusSection": "Datos sobre el estado civil de la persona a la que se refiere la solicitud",
+  "formSection": "Forma de notificación",
+  "sectionTitle": "Pasaporte polaco emitido más recientemente",
+  "sectionTitleDP": "Documento de viaje de extranjero u otro documento que acredite identidad y ciudadanía",
+  "sectionTitleDDO": "Datos adicionales de la persona a la que se refiere la solicitud y de sus padres",
+  "sectionTitleDSC": "Datos sobre el estado civil de la persona a la que se refiere la solicitud",
+  "sectionTitleOWD": "Documento de identidad polaco emitido más recientemente",
+  "sectionTitleDOSC": "Datos sobre el estado civil de la persona a la que se refiere la solicitud",
+  "sectionTitleOZ": "Último evento que afecta el matrimonio",
+  "sectionTitleFP": "Forma de notificación",
+
+  "labels": {
+    "imie": "Nombre",
+    "nazwisko": "Apellido",
+    "ulica": "Calle",
+    "numerDomu": "Número de casa",
+    "numerLokalu": "Número de apartamento",
+    "kodPocztowy": "Código postal",
+    "miejscowosc": "Localidad",
+    "plec": "Sexo",
+    "dataUrodzenia": "Fecha de nacimiento",
+    "krajUrodzenia": "País de nacimiento",
+    "adresElektroniczny": "Correo electrónico",
+    "obywatelstwo": "Ciudadanía",
+    "imiePierwszeKtorejDotyczyWniosek": "Primer nombre",
+    "imieDrugieKtorejDotyczyWniosek": "Segundo nombre",
+    "imieKolejneKtorejDotyczyWniosek": "Tercer nombre",
+    "krajMiejscaZamieszkania": "País de residencia",
+    "obywatelstwoInne": "Indique el país",
+    "nazwiskoRodowe": "Apellido de soltera",
+    "miejsceUrodzenia": "Lugar de nacimiento",
+    "oznaczenieAktuUrodzenia": "Referencia del acta de nacimiento",
+    "oznaczenieUrzeduAktUrodzenia": "Referencia de la oficina del registro civil donde se emitió el acta de nacimiento",
+    "imieOjca": "Nombre del padre",
+    "nazwiskoRodoweOjca": "Apellido de soltera del padre",
+    "imieMatki": "Nombre de la madre",
+    "nazwiskoRodoweMatki": "Apellido de soltera de la madre",
+    "numerDowodu": "Número de documento de identidad",
+    "dataWaznosciDowodu": "Fecha de validez del documento",
+    "oznaczenieOrganuKtoryWydalDowod": "Autoridad emisora",
+    "stanCywilny": "Estado civil",
+    "imieMalzonka": "Nombre del cónyuge",
+    "nazwiskoRodoweMalzonka": "Apellido de soltera del cónyuge",
+    "numerPeselMalzonka": "PESEL del cónyuge",
+    "numerPaszportu": "Número de pasaporte",
+    "dataWaznosciPaszportu": "Fecha de validez del pasaporte",
+    "numerPodrozy": "Número del documento de viaje",
+    "dataWaznosciPodrozy": "Fecha de validez del documento de viaje",
+    "zdarzenie": "Evento",
+    "dataZdazenia": "Fecha del evento",
+    "oznaczenieAktuMalzenstwa": "Referencia del acta de matrimonio o número de expediente judicial que disolvió/anuló el matrimonio, o número del acta de defunción del cónyuge",
+    "oznaczenieUrzeduStanuCywilnego": "Referencia de la oficina del registro civil donde se emitió el acta de matrimonio o de defunción, o referencia del tribunal que disolvió/anuló el matrimonio"
+  },
+
+  "options": {
+    "plec": {
+      "kobieta": "Mujer",
+      "mezczyzna": "Hombre"
+    },
+    "obywatelstwo": {
+      "polskie": "Polaco",
+      "bezpanstwowiec": "Apátrida",
+      "inne": "Otro"
+    },
+    "stanCywilny": {
+      "kawaler-panna": "Soltero / Soltera",
+      "żonaty-zamężna": "Casado / Casada",
+      "rozwiedziony-rozwiedziona": "Divorciado / Divorciada",
+      "wdowiec-wdowa": "Viudo / Viuda"
+    },
+    "zdarzenie": {
+      "zawarcie-związku": "Celebración del matrimonio",
+      "rozwiązanie-związku": "Disolución del matrimonio",
+      "unieważnienie-związku": "Anulación del matrimonio",
+      "zgon-małżonka": "Fallecimiento del cónyuge (marque si conoce la fecha de fallecimiento)",
+      "zgon-małżonka-bez-daty-zgonu": "Fallecimiento del cónyuge - descubrimiento del cuerpo (marque si el cónyuge falleció, pero solo conoce la fecha de hallazgo del cuerpo)"
+    },
+    "version": {
+      "papierowa": "En papel",
+      "elektroniczna": "Electrónica"
+    }
+  },
+
+  "buttons": {
+    "submit": "Generar PDF",
+    "reset": "Limpiar formulario"
+  },
+
+  "peselSchema": {
+    "polishRegex": "Solo se permiten letras polacas",
+    "min": "Demasiado corto",
+    "max": "Demasiado largo",
+    "required": "Obligatorio",
+    "matches": "Solo números",
+    "email": "Correo electrónico inválido",
+    "kodPocztowy": "Formato: 00-000",
+    "pesel": "El PESEL debe tener 11 dígitos",
+    "dataUrodzenia": "La fecha no puede ser futura"
+  }
+}

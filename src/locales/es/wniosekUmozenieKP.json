@@ -1,0 +1,39 @@
+{
+  "title": "Solicitud de cancelación",
+  "sections": {
+    "applicant": "Datos del solicitante",
+    "office": "Datos de la oficina",
+    "subject": "Asunto de la solicitud",
+    "address": "Dirección de correspondencia"
+  },
+  "labels": {
+    "imieNazwisko": "Nombre y apellido",
+    "dataUrodzenia": "Fecha de nacimiento",
+    "obywatelstwo": "Ciudadanía",
+    "nrSprawy": "Número de expediente",
+    "miejscowoscUrzedu": "Localidad de la oficina",
+    "dataWypelnienia": "Fecha de llenado",
+    "przedmiotUdzielenia": "Asunto de la solicitud",
+    "ulica": "Calle",
+    "numerUlicy": "Número",
+    "kodPocztowy": "Código postal",
+    "miejscowoscWnioskodawcy": "Localidad"
+  },
+  "options": {
+    "default": "--- seleccionar ---",
+    "czasowy": "Permiso de residencia temporal",
+    "staly": "Residencia permanente",
+    "ue": "Residencia de largo plazo en la UE"
+  },
+  "umorzenieSchema": {
+    "polishRegex": "Solo se permiten letras polacas",
+    "min": "Demasiado corto",
+    "max": "Demasiado largo",
+    "required": "Obligatorio",
+    "matches": "Solo números",
+    "email": "Correo electrónico inválido",
+    "kodPocztowy": "Formato: 00-000",
+    "pesel": "El PESEL debe tener 11 dígitos",
+    "dataUrodzenia": "La fecha no puede ser futura"
+  }
+}
