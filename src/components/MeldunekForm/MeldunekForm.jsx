@@ -64,8 +64,8 @@ const MeldunekSchema = Yup.object().shape({
   wojewodztwo: Yup.string()
     .matches(polishRegex, t('meldunekSchema.polishRegex'))
     .required(t('meldunekSchema.required')),
-  dataPoczatkowa: Yup.date().required(t('meldunekSchema.required')),
-  dataKoncowa: Yup.date().required(t('meldunekSchema.required')),
+  dataPoczatkowa: Yup.string(),
+  dataKoncowa: Yup.string(),
 });
   const fields = [
     { name: "nazwisko", label: t('labels.nazwisko'), placeholder: "Kowalski", autoComplete: "family-name" },
